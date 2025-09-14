@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estante Mágica — Passe Mágico</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container{max-width:900px;margin:auto;padding:20px}
+    h1{color:#004aad;text-align:center;margin:0}
+    .tools{margin-top:14px}
+    .tools input{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px}
+    table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.96rem}
+    th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}
+    th{background:#004aad;color:#fff}
+    tr:nth-child(even){background:#f0f8ff}
+    .back-btn{display:inline-block;background:#e63946;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:10px}
+    .back-btn:hover{background:#004aad}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="overlay">
+      <img src="logo.png" alt="Logo da Escola">
+      <h1>Estante Mágica — Passe Mágico</h1>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="institucional.html">Institucional</a>
+    <a href="ensino.html">Ensino</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="recados.html">Recados</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <main class="container">
+    <a class="back-btn" href="projetos.html">← Voltar aos Projetos</a>
+
+    <div class="tools">
+      <input id="busca" type="search" placeholder="Pesquisar aluno…">
+    </div>
+
+    <table id="tabela-em">
+      <thead>
+        <tr><th>Aluno</th><th>Passe Mágico</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ANITA BEATRIZ DOS SANTOS CARNEIRO</td><td>FXD4JJM</td></tr>
+        <tr><td>BERNARDO PICOLLI DOS SANTOS</td><td>UCY6RPW</td></tr>
+        <tr><td>BRENO FELIPE</td><td>TQH3TSH</td></tr>
+        <tr><td>CAUÃ MENDES PANTOLFI</td><td>WLM6IDF</td></tr>
+        <tr><td>DAVI HENRIQUE VIANNA DE SOUZA</td><td>AAP1NGI</td></tr>
+        <tr><td>DAVY HENRIQUE LOPES DE CAMPOS</td><td>USK1PMV</td></tr>
+        <tr><td>EMANOELLY DE CASTRO RIGO</td><td>TCN7HKL</td></tr>
+        <tr><td>GABRIEL DA SILVA ARANTES</td><td>NMU9ASG</td></tr>
+        <tr><td>JULIA OKOPNIK ALEIXO</td><td>IFZ1UVQ</td></tr>
+        <tr><td>KAMILLA VITÓRIA GONÇALVES DOS SANTOS</td><td>EFG4YUS</td></tr>
+        <tr><td>KATTY NATALLY ZANOTTO</td><td>WRL2ZTM</td></tr>
+        <tr><td>KETHLLYN LARISSA SATURNO</td><td>DQH6AQC</td></tr>
+        <tr><td>LORENZO HENRIQUE MACIEL LINHARES</td><td>RTS4LNM</td></tr>
+        <tr><td>LÚIS FELIPE MILKIEWICZ TOMAZ</td><td>CFY3FMC</td></tr>
+        <tr><td>MARIA FERNANDA PEREIRA LOURENÇO</td><td>ATE1XCL</td></tr>
+        <tr><td>MATEUS GONÇALVES MOCELIN</td><td>NKD9XVJ</td></tr>
+        <tr><td>MILENA EDUARDA ANTONELO CARACHO</td><td>FYS9JAW</td></tr>
+        <tr><td>MILENA GREGOLIN MATTOS</td><td>YFX5QVL</td></tr>
+        <tr><td>NICOLI DE SOUZA SILVA</td><td>GXI7HCV</td></tr>
+        <tr><td>RAFAELLA DE CASTRO RIGO</td><td>SUF7IRF</td></tr>
+        <tr><td>RAMON FOLADOR</td><td>LYV6PLG</td></tr>
+        <tr><td>SANDYARA KATTLEYA SOUZA DE CANDIDO</td><td>YSG4UDI</td></tr>
+        <tr><td>SOPHIA EMANUELE DE LIMA HOFF</td><td>EZK4ILL</td></tr>
+        <tr><td>VALENTINA VALENTINI CORREIA</td><td>EQD4EIV</td></tr>
+        <tr><td>YASMIN GOUVEIA MORAIS</td><td>VHF6SYZ</td></tr>
+        <tr><td>YASMIN NOVAES MULLER</td><td>JZZ2TYZ</td></tr>
+        <tr><td>YASMIN SILVA BEZERRA</td><td>HUZ2QYR</td></tr>
+        <tr><td>YURI BALLAN</td><td>TQS5ZCC</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <script>
+    const busca = document.getElementById('busca');
+    const linhas = Array.from(document.querySelectorAll('#tabela-em tbody tr'));
+    busca.addEventListener('input', () => {
+      const q = busca.value.toLowerCase();
+      linhas.forEach(tr => tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none');
+    });
+  </script>
+</body>
+</html>

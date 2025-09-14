@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recados - Escola Terezinha Picoli Cezarotto</title>
+  <style>
+    :root{
+      --azul:#004aad;
+      --vermelho:#e63946;
+      --bg:#fefefe;
+      --card:#f0f8ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Comic Sans MS', Arial, sans-serif;
+      background:var(--bg);
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+    header{background:var(--azul);color:#fff;text-align:center;padding:20px}
+    header img{height:80px}
+    nav{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;background:var(--vermelho)}
+    nav a{color:#fff;text-decoration:none;padding:12px 16px;font-weight:bold;border-radius:8px}
+    nav a:hover{background:var(--azul)}
+    main{flex:1}
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    h1,h2{margin:0}
+    h2{color:var(--azul);margin:20px 0;border-bottom:3px solid var(--vermelho);display:inline-block;padding-bottom:6px}
+    .note{
+      background:var(--card);
+      border-left:6px solid var(--vermelho);
+      border-radius:12px;
+      padding:14px;
+      margin:10px 0;
+      box-shadow:2px 2px 10px rgba(0,0,0,.06);
+    }
+    .note strong{display:block;margin-bottom:6px}
+    footer{
+      background:var(--azul);
+      color:#fff;
+      text-align:center;
+      padding:14px;
+      font-size:14px;
+      margin-top:20px;
+    }
+    .whatsapp-btn{
+      position:fixed;right:20px;bottom:20px;z-index:10;
+      background:#25d366;color:#fff;text-decoration:none;
+      font-size:22px;padding:14px;border-radius:50%;
+      box-shadow:0 2px 10px rgba(0,0,0,.3);
+    }
+    .whatsapp-btn:hover{background:#20b358}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo da Escola" />
+    <h1>Recados e Comunicados</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="institucional.html">Institucional</a>
+    <a href="ensino.html">Ensino</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="recados.html">Recados</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h2>Últimos avisos</h2>
+
+      <div class="note">
+        <strong>📢 Provas finais</strong>
+        Não faltem às aulas — estamos na reta final do ano letivo.
+      </div>
+
+      <div class="note">
+        <strong>🎉 Festa Junina</strong>
+        Dia 05/07. Tragam comidas típicas para o nosso arraiá!
+      </div>
+
+      <div class="note">
+        <strong>🚌 Visita à UnioXP</strong>
+        Participação no contra turno. A presença não substitui a aula regular.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <a class="whatsapp-btn" href="https://wa.me/5545999999999" target="_blank" aria-label="Fale conosco no WhatsApp">💬</a>
+</body>
+</html>
