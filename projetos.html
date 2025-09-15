@@ -4,82 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos - Escola Terezinha Picoli Cezarotto</title>
-  <style>
-    body { margin: 0; font-family: 'Comic Sans MS', Arial, sans-serif; }
-    header { background-color: #004aad; color: white; text-align: center; padding: 20px; }
-    header img { height: 80px; }
-    nav { display: flex; justify-content: center; background: #e63946; }
-    nav a { color: white; text-decoration: none; padding: 15px; }
-    nav a:hover { background: #004aad; border-radius: 10px; }
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
-    .project-card { background: #f0f8ff; border-left: 6px solid #e63946; padding: 15px; margin: 15px 0; border-radius: 10px; }
-    footer { background: #004aad; color: white; text-align: center; padding: 15px; margin-top: 40px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo da Escola">
-    <h1>Projetos da Escola</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="institucional.html">Institucional</a>
-    <a href="ensino.html">Ensino</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="recados.html">Recados</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
 
-  <div class="container">
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Projetos</div>
+</div>
+
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="container">
+  <p>
+    Nossa escola desenvolve projetos inovadores que incentivam a leitura, tecnologia, raciocínio lógico e criatividade,
+    alinhados com a <strong>BNCC</strong> e os <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong>.
+  </p>
+
+  <h2>Projetos em Destaque</h2>
+  <div class="grid">
+    
+    <!-- PROJETO 1 -->
     <div class="project-card">
-      <h2>🤖 Projeto de Robótica Sustentável</h2>
-      <p>Projeto inovador que ensina conceitos de tecnologia e sustentabilidade através da construção de robôs com materiais recicláveis e de baixo custo.</p>
+      <h3>📚 Estante Mágica</h3>
+      <p>
+        Incentiva a escrita e a leitura, transformando os alunos em pequenos autores. Cada criança escreve
+        sua própria história e, ao final, recebe um livro impresso com sua obra.
+      </p>
+      <a href="estante-magica.html" class="btn">Ver mais</a>
     </div>
-    <!-- Matific -->
-<div class="project-card">
-  <h3>🧮 Matific</h3>
-  <p>Plataforma gamificada de Matemática com atividades alinhadas à BNCC. Estimula o raciocínio lógico com desafios divertidos e trilhas personalizadas.</p>
-  <div class="tags">Matemática • Gamificação • BNCC</div>
-  <div class="btns">
-    <a class="btn" href="matific.html">Lista de Alunos</a>
-  </div>
-</div>
 
-<!-- Estante Mágica -->
-<div class="project-card">
-  <h3>📘 Estante Mágica</h3>
-  <p>Projeto onde os estudantes escrevem e publicam seus próprios livros, incentivando a leitura e a criatividade.</p>
-  <div class="tags">Leitura • Escrita • Autoria</div>
-  <div class="btns">
-    <a class="btn" href="estante-magica.html">Passe Mágico</a>
-  </div>
-</div>
-
-<!-- HP IDEA -->
-<div class="project-card">
-  <h3>💡 HP IDEA (Brasil)</h3>
-  <p>Formação em inovação educacional com projetos mão na massa, tecnologia de baixo custo e cultura maker.</p>
-  <div class="tags">Inovação • Maker • Sustentabilidade</div>
-  <div class="btns">
-    <a class="btn" href="https://hpidea.verdantand.co" target="_blank" rel="noopener">Página oficial</a>
-  </div>
-</div>
+    <!-- PROJETO 2 -->
     <div class="project-card">
-      <h2>📚 Projeto Leitura Mágica</h2>
-      <p>Estimula a leitura e criatividade dos alunos, envolvendo a comunidade escolar em atividades literárias e apresentações teatrais.</p>
+      <h3>🧮 Matific</h3>
+      <p>
+        Plataforma digital de matemática gamificada que estimula o raciocínio lógico por meio de desafios
+        divertidos, promovendo aprendizado personalizado.
+      </p>
+      <a href="matific.html" class="btn">Ver mais</a>
     </div>
-	
 
-
-	
+    <!-- PROJETO 3 -->
+    <div class="project-card">
+      <h3>💡 HP IDEA</h3>
+      <p>
+        Projeto inovador de tecnologia e empreendedorismo que desenvolve competências digitais e promove
+        soluções criativas para problemas reais da comunidade escolar.
+      </p>
+      <a href="https://hpidea.verdantand.co" target="_blank" class="btn">Acessar</a>
+    </div>
   </div>
+</main>
 
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
 
+<!-- ===== BOTÃO WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
 
-  <footer>
-    © 2025 Escola Municipal Terezinha Picoli Cezarotto - Todos os direitos reservados
-  </footer>
 </body>
 </html>

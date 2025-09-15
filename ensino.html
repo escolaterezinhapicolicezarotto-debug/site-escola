@@ -4,50 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ensino - Escola Terezinha Picoli Cezarotto</title>
-  <style>
-    body { margin: 0; font-family: 'Comic Sans MS', Arial, sans-serif; background-color: #fefefe; }
-    header { background-color: #004aad; color: white; padding: 20px; text-align: center; }
-    header img { height: 80px; }
-    nav { display: flex; justify-content: center; background-color: #e63946; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; padding: 15px 20px; font-weight: bold; }
-    nav a:hover { background-color: #004aad; border-radius: 10px; }
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
-    h2 { color: #004aad; border-bottom: 3px solid #e63946; display: inline-block; padding-bottom: 5px; margin-top: 30px; }
-    .class-card { background: #f0f8ff; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 6px solid #e63946; }
-    footer { background-color: #004aad; color: white; text-align: center; padding: 15px; font-size: 14px; margin-top: 40px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo da Escola">
-    <h1>Turmas e Séries</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="institucional.html">Institucional</a>
-    <a href="ensino.html">Ensino</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="recados.html">Recados</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
 
-  <div class="container">
-    <h2>Educação Infantil</h2>
+<!-- ===== FAIXA AZUL COM O NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Ensino</div>
+</div>
+
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="container">
+  <p>
+    Conheça nossas turmas e etapas de ensino. Trabalhamos com atividades lúdicas, projetos e
+    acompanhamento pedagógico alinhados à <strong>BNCC</strong>, respeitando o ritmo de cada estudante.
+  </p>
+
+  <h2>Turmas</h2>
+  <div class="grid" style="margin-bottom:20px">
     <div class="class-card">Infantil IV</div>
     <div class="class-card">Infantil V</div>
-
-    <h2>Ensino Fundamental - Anos Iniciais</h2>
     <div class="class-card">1º Ano</div>
     <div class="class-card">2º Ano</div>
     <div class="class-card">3º Ano</div>
     <div class="class-card">4º Ano</div>
     <div class="class-card">5º Ano</div>
+    <div class="class-card">SMR</div>
+
   </div>
 
-  <footer>
-    © 2025 Escola Municipal Terezinha Picoli Cezarotto - Todos os direitos reservados
-  </footer>
+  <div class="note">
+    <strong>Metodologia:</strong> Foco em leitura e escrita, raciocínio lógico, projetos interdisciplinares,
+    cultura digital e cidadania. Nossa proposta pedagógica valoriza o aprendizado ativo, o protagonismo dos
+    estudantes e a integração entre tecnologia e conhecimento.
+  </div>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== BOTÃO DO WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
 </body>
 </html>

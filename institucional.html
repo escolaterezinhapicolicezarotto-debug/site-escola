@@ -4,180 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Institucional - Escola Terezinha Picoli Cezarotto</title>
-  <style>
-    /* ======== ESTILO GERAL ======== */
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', Arial, sans-serif;
-      background-color: #fefefe;
-      line-height: 1.6;
-    }
-
-    /* ======== CABEÇALHO ======== */
-    header {
-      background-color: #004aad; /* Azul Royal */
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header img {
-      height: 80px;
-    }
-
-    /* ======== MENU DE NAVEGAÇÃO ======== */
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #e63946; /* Vermelho */
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #004aad;
-      border-radius: 10px;
-    }
-
-    /* ======== CONTEÚDO PRINCIPAL ======== */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h2 {
-      color: #004aad;
-      border-bottom: 3px solid #e63946;
-      display: inline-block;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #333;
-      text-align: justify;
-    }
-
-    /* Blocos coloridos */
-    .highlight {
-      background-color: #f0f8ff;
-      border-left: 8px solid #e63946;
-      padding: 15px;
-      border-radius: 10px;
-      margin: 20px 0;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* ======== RODAPÉ ======== */
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-    /* ======== BOTÃO WHATSAPP ======== */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      font-size: 22px;
-      padding: 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #20b358;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ======== CABEÇALHO ======== -->
-  <header>
-    <img src="logo.png" alt="Logo da Escola">
-    <h1>Escola Municipal Terezinha Picoli Cezarotto</h1>
-  </header>
 
-  <!-- ======== MENU DE NAVEGAÇÃO ======== -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="institucional.html">Institucional</a>
-    <a href="ensino.html">Ensino</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="recados.html">Recados</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
 
-  <!-- ======== CONTEÚDO PRINCIPAL ======== -->
-  <div class="container">
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Institucional</div>
+</div>
+
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO ===== -->
+<main class="container">
+  <section style="margin-bottom:22px">
     <h2>Sobre a Escola</h2>
-    <div class="highlight">
-      <p>
-        A <strong>Escola Municipal Terezinha Picoli Cezarotto</strong> é um espaço acolhedor e inclusivo,
-        que valoriza a educação integral, o respeito e a criatividade.
-        Nosso objetivo é oferecer uma educação de qualidade, preparando nossos alunos
-        para os desafios do futuro, sempre com carinho, dedicação e inovação.
-      </p>
-    </div>
+    <p>
+      A <strong>Escola Municipal Terezinha Picoli Cezarotto</strong> é um espaço acolhedor, inclusivo e
+      inovador, onde as crianças aprendem com protagonismo, curiosidade e alegria. Valorizamos a parceria
+      com as famílias e a comunidade, desenvolvendo projetos que unem leitura, tecnologia, ciências, arte e cidadania.
+    </p>
+  </section>
 
+  <section style="margin-bottom:22px">
     <h2>Nossa História</h2>
-    <div class="highlight">
-      <p>
-        Fundada com a missão de transformar vidas por meio da educação, a Escola
-        Terezinha Picoli Cezarotto tem uma trajetória marcada por conquistas,
-        projetos inovadores e a parceria com a comunidade escolar.  
-        Ao longo dos anos, formamos gerações de estudantes que levam consigo os
-        valores de solidariedade, ética e aprendizado contínuo, atuando de forma
-        ativa na sociedade.
-      </p>
-    </div>
+    <p>
+      Construída com o esforço de muitas mãos, nossa escola cresceu ao longo dos anos com a missão de formar
+      cidadãos críticos, criativos e solidários. Projetos como a <em>Estante Mágica</em>, <em>Matific</em> e
+      iniciativas de robótica e sustentabilidade fazem parte do nosso caminho.
+    </p>
+  </section>
 
+  <section style="margin-bottom:22px">
     <h2>Nossa Filosofia</h2>
-    <div class="highlight">
-      <p>
-        Acreditamos que cada criança é única e possui talentos que devem ser incentivados.
-        Nossa filosofia está baseada na valorização da diversidade, na inclusão social
-        e na construção coletiva do conhecimento, despertando o prazer de aprender
-        e respeitando o ritmo individual de cada aluno.
-      </p>
-    </div>
+    <ul class="nice">
+      <li>Respeito às diferenças e valorização da identidade de cada estudante.</li>
+      <li>Aprendizagem significativa, lúdica e contextualizada.</li>
+      <li>Promoção de valores como empatia, cooperação e responsabilidade.</li>
+      <li>Integração entre escola, família e comunidade.</li>
+    </ul>
+  </section>
 
+  <section style="margin-bottom:22px">
     <h2>Metodologia de Ensino</h2>
-    <div class="highlight">
-      <p>
-        Nossa metodologia de ensino é centrada no estudante, promovendo a
-        aprendizagem ativa por meio de projetos, atividades lúdicas e tecnologia educacional.  
-        Trabalhamos de forma alinhada à <strong>BNCC (Base Nacional Comum Curricular)</strong> 
-        e aos <strong>Objetivos de Desenvolvimento Sustentável (ODS)</strong>,
-        preparando nossos alunos para serem cidadãos críticos, criativos e conscientes,
-        prontos para transformar a realidade onde vivem.
-      </p>
+    <p>
+      Trabalhamos alinhados à <strong>BNCC</strong>, com foco no desenvolvimento integral das competências
+      cognitivas, socioemocionais e digitais. Utilizamos metodologias ativas, projetos interdisciplinares e
+      avaliação formativa, garantindo acompanhamento próximo de cada turma.
+    </p>
+    <div class="note" style="margin-top:12px">
+      <strong>Destaques:</strong> leitura e autoria de textos, matemática gamificada, cultura digital,
+      ciências hands-on, artes, jogos cooperativos e projetos de cidadania.
     </div>
-  </div>
+  </section>
 
-  <!-- ======== RODAPÉ ======== -->
-  <footer>
-    © 2025 Escola Municipal Terezinha Picoli Cezarotto - Todos os direitos reservados
-  </footer>
+  <section>
+    <h2>Estrutura e Serviços</h2>
+    <ul class="nice">
+      <li>Ambientes acolhedores e adaptados para a infância.</li>
+      <li>Laboratórios e recursos de tecnologia educativa.</li>
+      <li>Biblioteca e projetos de incentivo à leitura.</li>
+      <li>Atividades complementares, eventos culturais e feiras de conhecimento.</li>
+    </ul>
+  </section>
+</main>
 
-  <!-- ======== BOTÃO WHATSAPP ======== -->
-  <a class="whatsapp-btn" href="https://wa.me/5545999999999" target="_blank" title="Fale conosco pelo WhatsApp">💬</a>
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
 </body>
 </html>

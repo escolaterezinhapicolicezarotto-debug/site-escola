@@ -1,262 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Escola Terezinha Picoli Cezarotto</title>
-  <style>
-    :root{
-      --azul:#004aad;
-      --vermelho:#e63946;
-      --bg:#fefefe;
-      --card:#f0f8ff;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Comic Sans MS', Arial, sans-serif;
-      background:var(--bg);
-      display:flex;
-      flex-direction:column;
-      min-height:100vh;
-    }
-    header{background:var(--azul);color:#fff;text-align:center;padding:20px}
-    header img{height:80px}
-
-    nav{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;background:var(--vermelho)}
-    nav a{color:#fff;text-decoration:none;padding:12px 16px;font-weight:bold;border-radius:8px}
-    nav a:hover{background:var(--azul)}
-
-    main{flex:1}
-    .container{max-width:980px;margin:0 auto;padding:20px}
-
-    h1,h2{margin:0}
-    h2{color:var(--azul);margin:20px 0;border-bottom:3px solid var(--vermelho);display:inline-block;padding-bottom:6px}
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:12px;
-      margin-bottom:20px;
-    }
-    .card{
-      background:var(--card);
-      border-left:6px solid var(--vermelho);
-      border-radius:12px;
-      padding:14px;
-      box-shadow:2px 2px 10px rgba(0,0,0,.06);
-    }
-    .card a{color:var(--azul);text-decoration:none;font-weight:bold}
-
-    form{
-      background:#fff;
-      border:2px dashed var(--azul);
-      border-radius:14px;
-      padding:16px;
-    }
-    label{font-weight:bold;display:block;margin-top:10px}
-    input, textarea, select{
-      width:100%;
-      padding:10px;
-      border:1px solid #ccc;
-      border-radius:8px;
-      margin-top:6px;
-      font-family:inherit;
-    }
-    textarea{min-height:120px;resize:vertical}
-    .row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-    .actions{
-      margin-top:14px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    button, .btn{
-      background:var(--azul);
-      color:#fff;
-      border:none;
-      padding:12px 16px;
-      border-radius:10px;
-      cursor:pointer;
-      font-weight:bold;
-      text-decoration:none;
-      display:inline-block;
-    }
-    button:hover, .btn:hover{background:#00348a}
-
-    .hint{font-size:.9rem;opacity:.8;margin-top:6px}
-
-    footer{
-      background:var(--azul);
-      color:#fff;
-      text-align:center;
-      padding:14px;
-      font-size:14px;
-      margin-top:20px;
-    }
-
-    .whatsapp-btn{
-      position:fixed;right:20px;bottom:20px;z-index:10;
-      background:#25d366;color:#fff;text-decoration:none;
-      font-size:22px;padding:14px;border-radius:50%;
-      box-shadow:0 2px 10px rgba(0,0,0,.3);
-    }
-    .whatsapp-btn:hover{background:#20b358}
-
-    @media (max-width:640px){
-      .row{grid-template-columns:1fr}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo da Escola" />
-    <h1>Contato e Denúncias</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="institucional.html">Institucional</a>
-    <a href="ensino.html">Ensino</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="recados.html">Recados</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
 
-  <main>
-    <div class="container">
-      <h2>Fale com a escola</h2>
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Contato</div>
+</div>
 
-      <!-- Cartões de contato rápido -->
-      <div class="cards">
-        <div class="card">
-          <strong>WhatsApp</strong><br/>
-          <a href="https://wa.me/554539021479" target="_blank" rel="noopener noreferrer">
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="container">
+
+  <section style="margin-bottom:24px">
+    <h2>Fale Conosco</h2>
+    <p>
+      Estamos à disposição para tirar dúvidas, receber sugestões e ouvir você.
+      Entre em contato pelos canais abaixo ou envie uma mensagem pelo formulário.
+    </p>
+
+    <!-- Informações de contato -->
+    <div class="grid" style="margin-top:16px">
+      <div class="note">
+        <strong>📞 Telefone / WhatsApp</strong>
+        <p style="margin-top:6px">
+          <a href="https://wa.me/554539021479" target="_blank" style="text-decoration:none;color:#0b4cad;">
             +55 (45) 3902-1479
           </a>
-          <div class="hint">Clique para abrir a conversa no WhatsApp.</div>
-        </div>
-
-        <div class="card">
-          <strong>E-mail</strong><br/>
-          <!-- TROCAR para gmail.com se for o correto -->
-          <a href="mailto:escolaterezinhapicolicezarotto@gmai.com?subject=Contato%20via%20site">
-            escolaterezinhapicolicezarotto@gmai.com
-          </a>
-          <div class="hint">Se for <em>gmail.com</em>, ajuste no código do site.</div>
-        </div>
-
-        <div class="card">
-          <strong>Endereço</strong><br/>
-          Escola Municipal Terezinha Picoli Cezarotto<br/>
-          <span class="hint">Atualize aqui o endereço completo, se desejar.</span>
-        </div>
+        </p>
       </div>
 
-      <h2>Envie uma mensagem</h2>
+      <div class="note">
+        <strong>✉️ E-mail</strong>
+        <p style="margin-top:6px">
+          <a href="mailto:escolaterezinhapicolicezarotto@gmail.com" style="text-decoration:none;color:#0b4cad;">
+            escolaterezinhapicolicezarotto@gmail.com
+          </a>
+        </p>
+      </div>
 
-      <!-- Formulário que abre o e-mail do usuário já preenchido -->
-      <form id="form-contato">
-        <div class="row">
-          <div>
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
-          </div>
-          <div>
-            <label for="telefone">Telefone</label>
-            <input id="telefone" name="telefone" type="tel" placeholder="(45) 9 9999-9999" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div>
-            <label for="email">Seu e-mail</label>
-            <input id="email" name="email" type="email" placeholder="voce@exemplo.com" />
-          </div>
-          <div>
-            <label for="assunto">Assunto</label>
-            <select id="assunto" name="assunto" required>
-              <option value="" disabled selected>Selecione…</option>
-              <option value="Contato">Contato</option>
-              <option value="Duvida">Dúvida</option>
-              <option value="Elogio">Elogio</option>
-              <option value="Reclamacao">Reclamação</option>
-              <option value="Denuncia">Denúncia</option>
-            </select>
-          </div>
-        </div>
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem…" required></textarea>
-
-        <div class="actions">
-          <button type="submit">Enviar por e-mail</button>
-          <a class="btn" id="btn-whats" href="https://wa.me/554539021479" target="_blank" rel="noopener noreferrer">Enviar no WhatsApp</a>
-        </div>
-
-        <div class="hint">
-          Ao clicar em <strong>Enviar por e-mail</strong>, seu aplicativo de e-mail abrirá com a mensagem pronta.
-        </div>
-      </form>
+      <div class="note">
+        <strong>📍 Endereço</strong>
+        <p style="margin-top:6px">
+          Rua Exemplo, 123 - Bairro, Cascavel - PR
+        </p>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
-  </footer>
+  <!-- Formulário de contato -->
+  <section>
+    <h2>Envie uma mensagem</h2>
+    <form class="card" onsubmit="return enviarMensagem(event)">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank" aria-label="Fale conosco no WhatsApp">💬</a>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-  <script>
-    // === Ajusta o link do WhatsApp para já incluir a mensagem digitada ===
-    const mensagemEl = document.getElementById('mensagem');
-    const nomeEl = document.getElementById('nome');
-    const btnWhats = document.getElementById('btn-whats');
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
 
-    function atualizarWhats() {
-      const nome = (nomeEl.value || '').trim();
-      const texto = (mensagemEl.value || '').trim();
-      const assunto = (document.getElementById('assunto').value || 'Contato');
-      const preview =
-        `Assunto: ${assunto}%0A` +
-        (nome ? `Nome: ${encodeURIComponent(nome)}%0A` : '') +
-        (texto ? `%0AMensagem:%0A${encodeURIComponent(texto)}` : '');
-      btnWhats.href = `https://wa.me/554539021479?text=${preview}`;
-    }
-    nomeEl.addEventListener('input', atualizarWhats);
-    mensagemEl.addEventListener('input', atualizarWhats);
-    document.getElementById('assunto').addEventListener('change', atualizarWhats);
-    atualizarWhats();
+      <button type="submit" class="btn" style="margin-top:10px">Enviar</button>
+      <div id="msgEnviada" class="note" style="margin-top:10px;display:none">
+        Mensagem enviada com sucesso! ✅
+      </div>
+    </form>
+  </section>
+</main>
 
-    // === Envia por e-mail abrindo o cliente de e-mail do usuário ===
-    document.getElementById('form-contato').addEventListener('submit', function(e){
-      e.preventDefault();
-      const para = "escolaterezinhapicolicezarotto@gmai.com"; // TROQUE para gmail.com se necessário
-      const assunto = document.getElementById('assunto').value || 'Contato';
-      const nome = (document.getElementById('nome').value || '').trim();
-      const telefone = (document.getElementById('telefone').value || '').trim();
-      const email = (document.getElementById('email').value || '').trim();
-      const mensagem = (document.getElementById('mensagem').value || '').trim();
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
 
-      const corpo =
-`Assunto: ${assunto}
-Nome: ${nome}
-Telefone: ${telefone}
-E-mail: ${email}
+<!-- ===== BOTÃO WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
 
-Mensagem:
-${mensagem}`;
+<!-- ===== SCRIPT DO FORMULÁRIO ===== -->
+<script>
+  function enviarMensagem(event){
+    event.preventDefault();
+    document.getElementById('msgEnviada').style.display = 'block';
 
-      const mailto = `mailto:${para}?subject=${encodeURIComponent('Contato via site: ' + assunto)}&body=${encodeURIComponent(corpo)}`;
-      window.location.href = mailto;
-    });
-  </script>
+    // Limpa os campos após envio
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensagem').value = '';
+
+    // Some automaticamente após 3 segundos
+    setTimeout(()=>{
+      document.getElementById('msgEnviada').style.display = 'none';
+    },3000);
+  }
+</script>
+
 </body>
 </html>

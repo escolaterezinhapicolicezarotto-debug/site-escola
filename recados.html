@@ -1,102 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recados - Escola Terezinha Picoli Cezarotto</title>
-  <style>
-    :root{
-      --azul:#004aad;
-      --vermelho:#e63946;
-      --bg:#fefefe;
-      --card:#f0f8ff;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Comic Sans MS', Arial, sans-serif;
-      background:var(--bg);
-      display:flex;
-      flex-direction:column;
-      min-height:100vh;
-    }
-    header{background:var(--azul);color:#fff;text-align:center;padding:20px}
-    header img{height:80px}
-    nav{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;background:var(--vermelho)}
-    nav a{color:#fff;text-decoration:none;padding:12px 16px;font-weight:bold;border-radius:8px}
-    nav a:hover{background:var(--azul)}
-    main{flex:1}
-    .container{max-width:900px;margin:0 auto;padding:20px}
-    h1,h2{margin:0}
-    h2{color:var(--azul);margin:20px 0;border-bottom:3px solid var(--vermelho);display:inline-block;padding-bottom:6px}
-    .note{
-      background:var(--card);
-      border-left:6px solid var(--vermelho);
-      border-radius:12px;
-      padding:14px;
-      margin:10px 0;
-      box-shadow:2px 2px 10px rgba(0,0,0,.06);
-    }
-    .note strong{display:block;margin-bottom:6px}
-    footer{
-      background:var(--azul);
-      color:#fff;
-      text-align:center;
-      padding:14px;
-      font-size:14px;
-      margin-top:20px;
-    }
-    .whatsapp-btn{
-      position:fixed;right:20px;bottom:20px;z-index:10;
-      background:#25d366;color:#fff;text-decoration:none;
-      font-size:22px;padding:14px;border-radius:50%;
-      box-shadow:0 2px 10px rgba(0,0,0,.3);
-    }
-    .whatsapp-btn:hover{background:#20b358}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo da Escola" />
-    <h1>Recados e Comunicados</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="institucional.html">Institucional</a>
-    <a href="ensino.html">Ensino</a>
-    <a href="projetos.html">Projetos</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="recados.html">Recados</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
 
-  <main>
-    <div class="container">
-      <h2>Últimos avisos</h2>
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Recados</div>
+</div>
 
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO ===== -->
+<main class="container">
+  <p>
+    Fique por dentro dos avisos da escola. Atualizamos esta página sempre que houver um comunicado importante.
+  </p>
+
+  <!-- Avisos Importantes -->
+  <section style="margin-top:18px">
+    <h2>Avisos Importantes</h2>
+    <div class="grid">
       <div class="note">
-        <strong>📢 Provas finais</strong>
-        Não faltem às aulas — estamos na reta final do ano letivo.
+        <strong>[NOVO] Reunião de Pais — 20/09</strong><br>
+        <small>Publicado em 14/09/2025</small>
+        <p style="margin-top:8px">
+          Reuniões por turma no período da tarde. Verifique o horário exato com a professora.
+        </p>
       </div>
 
       <div class="note">
-        <strong>🎉 Festa Junina</strong>
-        Dia 05/07. Tragam comidas típicas para o nosso arraiá!
+        <strong>Uniformes e Identificação</strong><br>
+        <small>Publicado em 10/09/2025</small>
+        <p style="margin-top:8px">
+          Reforçamos o uso do uniforme e da identificação dos alunos. Obrigado pela parceria!
+        </p>
       </div>
 
       <div class="note">
-        <strong>🚌 Visita à UnioXP</strong>
-        Participação no contra turno. A presença não substitui a aula regular.
+        <strong>Entrega de Atividades — 3º ao 5º ano</strong><br>
+        <small>Publicado em 05/09/2025</small>
+        <p style="margin-top:8px">
+          As atividades do bimestre devem ser entregues até o dia 25/09.
+        </p>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
-  </footer>
+  <!-- Comunicados Recentes -->
+  <section style="margin-top:24px">
+    <h2>Comunicados Recentes</h2>
 
-  <a class="whatsapp-btn" href="https://wa.me/5545999999999" target="_blank" aria-label="Fale conosco no WhatsApp">💬</a>
+    <!-- Card 1 -->
+    <div class="card" style="margin-bottom:12px">
+      <strong>Projeto Leitura em Família</strong> — <small>Publicado em 02/09/2025</small>
+      <p style="margin-top:8px">
+        Leve um livro para casa e compartilhe momentos de leitura com a família. Registre a experiência no caderno.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="margin-bottom:12px">
+      <strong>Calendário de Avaliações (4º e 5º ano)</strong> — <small>Publicado em 01/09/2025</small>
+      <p style="margin-top:8px">
+        As avaliações ocorrerão entre 23 e 27/09. Conte com a nossa equipe para tirar dúvidas.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="margin-bottom:12px">
+      <strong>Autorizações de Imagem</strong> — <small>Publicado em 28/08/2025</small>
+      <p style="margin-top:8px">
+        Pedimos que as famílias encaminhem as autorizações assinadas para uso de imagem em projetos e eventos.
+      </p>
+    </div>
+
+    <!-- Como editar -->
+    <div class="note" style="margin-top:16px">
+      <strong>Como atualizar esta página?</strong><br>
+      Para incluir um novo recado, copie um dos cards acima (<code>&lt;div class="card"&gt;...&lt;/div&gt;</code> ou
+      <code>&lt;div class="note"&gt;...&lt;/div&gt;</code>) e cole logo abaixo, alterando título, data e texto.
+    </div>
+  </section>
+
+  <!-- Acesso rápido -->
+  <section style="margin-top:24px">
+    <div class="card">
+      <strong>Dúvidas ou recados urgentes?</strong>
+      <p style="margin:6px 0 10px">Fale com a secretaria da escola.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/554539021479" target="_blank">📲 WhatsApp</a>
+        <a class="btn alt" href="mailto:escolaterezinhapicolicezarotto@gmail.com?subject=Recado%20via%20site">✉️ E-mail</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
 </body>
 </html>
