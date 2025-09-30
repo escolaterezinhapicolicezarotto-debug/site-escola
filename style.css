@@ -1,0 +1,149 @@
+/* ===== Paleta ===== */
+:root{
+  --azul:#0b4cad;        /* azul royal */
+  --azul-esc:#083781;
+  --vermelho:#e63946;
+  --cinza:#f5f7fb;
+  --cinza-borda:#e6eaf0;
+  --branco:#fff;
+  --txt:#14202b;
+
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===== Reset e fonte ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--txt);
+  background:#fff;
+  line-height:1.6;
+  font-size:18px;
+}
+
+/* ===== Header (Hero) ===== */
+header{
+  color:var(--branco);
+  background:var(--azul);
+}
+header .overlay{
+  position:relative;
+  min-height:290px;             /* altura aumentada em +1cm */
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:40px 16px;
+background:
+  linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),
+  url('img/fachada.jpg') center/cover no-repeat;
+}
+/* topo menor para páginas internas */
+header.hero-sm .overlay{
+  min-height:290px; /* altura ajustada */
+}
+header .overlay img{
+  height:76px;width:auto;margin-right:10px;vertical-align:middle;
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))
+}
+header .overlay h1{
+  margin:10px 0 0;
+  font-size:clamp(22px,3.5vw,34px);
+  font-weight:800;
+}
+
+/* ===== Faixa azul com nome da página ===== */
+.page-ribbon{
+  background:var(--azul);
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.2px;
+  box-shadow:0 6px 20px rgba(0,0,0,.06);
+  text-align:center; /* centraliza o texto na barra */
+}
+.page-ribbon .container{
+  padding:14px 18px;
+  font-size:clamp(18px,2vw,22px);
+}
+
+/* ===== Navegação ===== */
+nav{
+  position:sticky;top:0;z-index:50;
+  display:flex;flex-wrap:wrap;gap:10px;
+  background:var(--branco);
+  padding:12px 18px;
+  border-bottom:1px solid var(--cinza-borda);
+  box-shadow:0 6px 20px rgba(0,0,0,.04);
+}
+nav a{
+  color:var(--azul);
+  text-decoration:none;
+  font-weight:700;
+  padding:8px 12px;
+  border-radius:999px;
+  transition:.15s ease;
+  border:1px solid transparent;
+}
+nav a:hover{background:#eef5ff;border-color:#d8e6ff}
+
+/* ===== Layout base ===== */
+.container{max-width:1100px;margin:auto;padding:28px 18px}
+h2{font-size:clamp(22px,2.6vw,30px);margin:0 0 12px;font-weight:800;color:var(--azul-esc)}
+p{margin:0 0 14px}
+
+/* ===== Cards / Grids ===== */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{
+  background:var(--branco);border:1px solid var(--cinza-borda);
+  border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)
+}
+.class-card{
+  background:#f0f6ff;border:1px dashed #bdd6ff;border-radius:14px;
+  padding:16px;font-weight:800;color:#093268;text-align:center
+}
+
+/* ===== Listas bonitas ===== */
+ul.nice{padding-left:1.1rem;margin:0}
+ul.nice li{margin:6px 0}
+
+/* ===== Botões ===== */
+.btn{
+  display:inline-block;background:var(--azul);color:#fff;
+  padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:800;
+  box-shadow:var(--shadow);border:0;cursor:pointer
+}
+.btn:hover{filter:brightness(.95)}
+.btn.alt{background:var(--vermelho)}
+
+/* ===== Destaques ===== */
+.banner{
+  background:var(--azul);color:#fff;text-align:center;
+  padding:14px;font-weight:800
+}
+.note,.event-card,.project-card{
+  background:#fff;border:1px solid var(--cinza-borda);
+  border-radius:14px;padding:14px;box-shadow:var(--shadow)
+}
+
+/* ===== Rodapé ===== */
+footer{
+  margin-top:26px;
+  background:#e4efff;              /* azul levemente mais forte */
+  border-top:1px solid #c5d8ff;    /* borda combinando */
+  text-align:center;
+  padding:18px;
+  color:#314355;
+}
+
+/* ===== WhatsApp flutuante ===== */
+.whatsapp-btn{
+  position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;
+  width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;text-decoration:none;box-shadow:var(--shadow)
+}
+
+/* ===== Responsivo extra ===== */
+@media (max-width:720px){
+  header .overlay img{height:64px}
+}

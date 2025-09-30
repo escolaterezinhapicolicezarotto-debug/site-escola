@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Escola Terezinha Picoli Cezarotto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
+
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Contato</div>
+</div>
+
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="institucional.html">Institucional</a>
+  <a href="ensino.html">Ensino</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="eventos.html">Eventos</a>
+  <a href="recados.html">Recados</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+<main class="container">
+
+  <section style="margin-bottom:24px">
+    <h2>Fale Conosco</h2>
+    <p>
+      Estamos à disposição para tirar dúvidas, receber sugestões e ouvir você.
+      Entre em contato pelos canais abaixo ou envie uma mensagem pelo formulário.
+    </p>
+
+    <!-- Informações de contato -->
+    <div class="grid" style="margin-top:16px">
+      <div class="note">
+        <strong>📞 Telefone / WhatsApp</strong>
+        <p style="margin-top:6px">
+          <a href="https://wa.me/554539021479" target="_blank" style="text-decoration:none;color:#0b4cad;">
+            +55 (45) 3902-1479
+          </a>
+        </p>
+      </div>
+
+      <div class="note">
+        <strong>✉️ E-mail</strong>
+        <p style="margin-top:6px">
+          <a href="mailto:escolaterezinhapicolicezarotto@gmail.com" style="text-decoration:none;color:#0b4cad;">
+            escolaterezinhapicolicezarotto@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="note">
+        <strong>📍 Endereço</strong>
+        <p style="margin-top:6px">
+          Rua Exemplo, 123 - Bairro, Cascavel - PR
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de contato -->
+  <section>
+    <h2>Envie uma mensagem</h2>
+    <form class="card" onsubmit="return enviarMensagem(event)">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+
+      <button type="submit" class="btn" style="margin-top:10px">Enviar</button>
+      <div id="msgEnviada" class="note" style="margin-top:10px;display:none">
+        Mensagem enviada com sucesso! ✅
+      </div>
+    </form>
+  </section>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== BOTÃO WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
+<!-- ===== SCRIPT DO FORMULÁRIO ===== -->
+<script>
+  function enviarMensagem(event){
+    event.preventDefault();
+    document.getElementById('msgEnviada').style.display = 'block';
+
+    // Limpa os campos após envio
+    document.getElementById('nome').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('mensagem').value = '';
+
+    // Some automaticamente após 3 segundos
+    setTimeout(()=>{
+      document.getElementById('msgEnviada').style.display = 'none';
+    },3000);
+  }
+</script>
+
+</body>
+</html>
