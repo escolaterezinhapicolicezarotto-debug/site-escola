@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Histórias com IA - Escola Terezinha Picoli Cezarotto</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
+
+<!-- ===== FAIXA AZUL ===== -->
+<div class="page-ribbon">
+  <div class="container">Histórias com IA</div>
+</div>
+
+<!-- ===== MENU ===== -->
+<nav>
+   <a href="../index.html">Home</a>
+  <a href="../institucional.html">Institucional</a>
+  <a href="../ensino.html">Ensino</a>
+  <a href="../projetos.html">Projetos</a>
+  <a href="../eventos.html">Eventos</a>
+  <a href="../recados.html">Recados</a>
+  <a href="../contato.html">Contato</a>
+</nav>
+
+<main class="container">
+  <p>
+    Preencha os campos abaixo para criar um <strong>prompt</strong> completo. Ele será usado na IA para gerar uma história
+    com <strong>6 partes</strong>, cada uma com cerca de <strong>200 palavras</strong>, escrita em <strong>1ª pessoa</strong>,
+    como se a criança estivesse contando com uma <strong>linguagem simples</strong> do dia a dia.
+  </p>
+
+  <!-- ================================ -->
+  <!--        GERADOR DE HISTÓRIAS      -->
+  <!-- ================================ -->
+  <section style="margin-top:18px">
+    <h2>Gerador de Histórias</h2>
+
+    <form class="card" onsubmit="return gerarHistoria(event)">
+      <div class="row">
+        <div>
+          <label for="nomeAluno">Nome do protagonista</label>
+          <input id="nomeAluno" type="text" required>
+          <small>Escreva o nome da criança que será a narradora da história.</small>
+        </div>
+        <div>
+          <label for="idadeSerie">Idade e série/ano</label>
+          <input id="idadeSerie" type="text" required>
+          <small>Ex.: 8 anos, 3º ano do ensino fundamental.</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="tipoHistoria">Tipo de história</label>
+          <select id="tipoHistoria" required>
+            <option value="">Selecione…</option>
+            <option>Aventura</option>
+            <option>Terror</option>
+            <option>Romance</option>
+            <option>Conto de fadas</option>
+            <option>Mistério</option>
+            <option>Ficção científica</option>
+            <option>Super-heróis</option>
+            <option>Vida na escola</option>
+          </select>
+          <small>Escolha o gênero principal que combina com a proposta.</small>
+        </div>
+        <div>
+          <label for="tomLinguagem">Tom e linguagem desejados</label>
+          <input id="tomLinguagem" type="text">
+          <small>Descreva como a criança fala: simples, divertido, curioso, corajoso, bem humorado…</small>
+        </div>
+      </div>
+
+      <label for="pessoasProximas">Pessoas próximas que participarão</label>
+      <textarea id="pessoasProximas"></textarea>
+      <small>Liste amigos de sala, familiares, professores e/ou animais de estimação que farão parte da história.</small>
+
+      <div class="row">
+        <div>
+          <label for="bonzinhos">Quem são os “bonzinhos”</label>
+          <textarea id="bonzinhos"></textarea>
+          <small>Descreva quem ajuda a criança: amigos, família, personagens mágicos, heróis, etc.</small>
+        </div>
+        <div>
+          <label for="malvados">Quem são os “malvados” ou obstáculos</label>
+          <textarea id="malvados"></textarea>
+          <small>Pode ser um vilão, um problema, um medo, um monstro, um desafio da escola, etc.</small>
+        </div>
+      </div>
+
+      <label for="cenarios">Cenários e lugares da história</label>
+      <textarea id="cenarios"></textarea>
+      <small>Cite os lugares principais: escola, sala de aula, pátio, casa, parque, floresta mágica, cidade, etc.</small>
+
+      <label for="objetivo">Objetivo da história e o que se espera aprender</label>
+      <textarea id="objetivo"></textarea>
+      <small>Explique o que a criança quer alcançar e qual a moral/ensinamento que deseja no final.</small>
+
+      <div class="row">
+        <div>
+          <label for="limites">Limites de conteúdo</label>
+          <textarea id="limites"></textarea>
+          <small>Defina limites: sem violência explícita, sem linguagem inadequada, foco em cooperação e respeito, etc.</small>
+        </div>
+        <div>
+          <label for="detalhesExtras">Detalhes extras importantes</label>
+          <textarea id="detalhesExtras"></textarea>
+          <small>Inclua detalhes que não podem faltar: objetos especiais, datas, eventos da escola, referências locais, etc.</small>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Gerar Prompt da História</button>
+        <button class="btn alt" type="button" onclick="copiar('saidaHistoria')">Copiar</button>
+      </div>
+
+      <div id="saidaHistoria" class="output" style="white-space:pre-wrap"></div>
+    </form>
+  </section>
+
+  <!-- ================================ -->
+  <!--       GERADOR DE BIOGRAFIA       -->
+  <!-- ================================ -->
+  <section style="margin-top:28px">
+    <h2>Gerador de Biografia do Aluno</h2>
+    <p>
+      Responda às perguntas para criar um prompt que ajude a IA a escrever uma <strong>biografia autêntica</strong>,
+      em linguagem simples, na <strong>1ª pessoa</strong>, próxima da essência de cada estudante.
+    </p>
+
+    <form class="card" onsubmit="return gerarBio(event)">
+      <div class="row">
+        <div>
+          <label for="bioNome">Nome completo do aluno</label>
+          <input id="bioNome" type="text" required>
+        </div>
+        <div>
+          <label for="bioIdadeSerie">Idade e série/ano</label>
+          <input id="bioIdadeSerie" type="text" required>
+        </div>
+      </div>
+
+      <label for="bioOrigem">De onde o aluno é / onde mora</label>
+      <input id="bioOrigem" type="text">
+      <small>Informe cidade/bairro/comunidade, se desejar.</small>
+
+      <label for="bioGostos">O que o aluno mais gosta</label>
+      <textarea id="bioGostos"></textarea>
+      <small>Brincadeiras, esportes, matérias preferidas, livros, jogos, desenhos, música, comidas, etc.</small>
+
+      <label for="bioPessoas">Pessoas importantes na vida do aluno</label>
+      <textarea id="bioPessoas"></textarea>
+      <small>Família, amigos, professores, vizinhos, animais de estimação.</small>
+
+      <label for="bioConquistas">Conquistas, desafios e sonhos</label>
+      <textarea id="bioConquistas"></textarea>
+      <small>Conte uma conquista, algo difícil que superou e um sonho para o futuro.</small>
+
+      <label for="bioValores">Valores e jeitinho de ser</label>
+      <textarea id="bioValores"></textarea>
+      <small>Como a criança se vê: carinhosa, curiosa, esforçada, tímida, corajosa, criativa…</small>
+
+      <label for="bioDetalhes">Detalhes marcantes</label>
+      <textarea id="bioDetalhes"></textarea>
+      <small>Inclua hábitos, manias, memórias, uma história curtinha da escola ou da família.</small>
+
+      <div class="actions">
+        <button class="btn" type="submit">Gerar Prompt da Biografia</button>
+        <button class="btn alt" type="button" onclick="copiar('saidaBio')">Copiar</button>
+      </div>
+
+      <div id="saidaBio" class="output" style="white-space:pre-wrap"></div>
+    </form>
+  </section>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  function gerarHistoria(e){
+    e.preventDefault();
+
+    const nomeAluno     = document.getElementById('nomeAluno').value.trim();
+    const idadeSerie    = document.getElementById('idadeSerie').value.trim();
+    const tipoHistoria  = document.getElementById('tipoHistoria').value.trim();
+    const tomLinguagem  = document.getElementById('tomLinguagem').value.trim();
+    const pessoas       = document.getElementById('pessoasProximas').value.trim();
+    const bonzinhos     = document.getElementById('bonzinhos').value.trim();
+    const malvados      = document.getElementById('malvados').value.trim();
+    const cenarios      = document.getElementById('cenarios').value.trim();
+    const objetivo      = document.getElementById('objetivo').value.trim();
+    const limites       = document.getElementById('limites').value.trim();
+    const extras        = document.getElementById('detalhesExtras').value.trim();
+
+    const prompt = `
+Você é uma IA que escreve histórias infantis para alunos de ${idadeSerie}.
+Escreva uma história em 1ª pessoa, como se fosse a criança ${nomeAluno} narrando, usando linguagem simples, afetuosa e adequada para crianças de 7 a 11 anos.
+
+Gênero principal: ${tipoHistoria}
+Tom e linguagem: ${tomLinguagem || "simples, divertida e curiosa"}
+Pessoas que participam: ${pessoas || "colegas de classe, professores, família, animais de estimação"}
+Heróis/aliados (bonzinhos): ${bonzinhos || "amigos e família que ajudam"}
+Vilões/obstáculos (malvados): ${malvados || "um medo, um desafio da escola ou um antagonista leve"}
+Cenários: ${cenarios || "escola, casa, pátio, biblioteca, parque"}
+Objetivo e moral/ensinamento: ${objetivo || "mostrar a importância da amizade, respeito e coragem"}
+Limites de conteúdo: ${limites || "sem violência explícita, sem palavrões, respeitar diversidade e inclusão"}
+Detalhes extras obrigatórios: ${extras || "incluir ao menos um diálogo curto e um objeto significativo"}
+
+Estrutura e tamanho:
+- A história deve ter 6 partes (capítulos curtos), claramente separadas por títulos "Parte 1", "Parte 2", ..., "Parte 6".
+- Cada parte deve ter aproximadamente 200 palavras, com variação de até ±40 palavras.
+- A última parte deve trazer uma moral/ensinamento de forma natural, sem tom de lição de casa.
+
+Formatação:
+- Use parágrafos curtos, frases diretas e vocabulário comum para a idade.
+- Inclua pelo menos um diálogo em 3 partes diferentes da história (por exemplo, "eu disse", "ela respondeu").
+- Evite listas; escreva em narrativa fluida.
+- Não inclua conteúdo sensível, discriminatório ou inadequado para crianças.
+
+Escreva agora a história completa.`;
+
+    document.getElementById('saidaHistoria').textContent = prompt;
+    window.scrollTo({ top: document.getElementById('saidaHistoria').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function gerarBio(e){
+    e.preventDefault();
+
+    const nome   = document.getElementById('bioNome').value.trim();
+    const idade  = document.getElementById('bioIdadeSerie').value.trim();
+    const origem = document.getElementById('bioOrigem').value.trim();
+    const gostos = document.getElementById('bioGostos').value.trim();
+    const pessoas= document.getElementById('bioPessoas').value.trim();
+    const conqu  = document.getElementById('bioConquistas').value.trim();
+    const valores= document.getElementById('bioValores').value.trim();
+    const det    = document.getElementById('bioDetalhes').value.trim();
+
+    const promptBio = `
+Você é uma IA que escreve biografias infantis em 1ª pessoa, como se o(a) estudante estivesse se apresentando, em linguagem simples e afetiva, adequada para 7–11 anos.
+
+Dados:
+- Nome: ${nome}
+- Idade/Série: ${idade}
+- De onde é/onde mora: ${origem || "informação não informada"}
+- O que mais gosta: ${gostos || "brincadeiras, amigos, matérias preferidas, hobbies"}
+- Pessoas importantes: ${pessoas || "familiares, amigos, professores, animais de estimação"}
+- Conquistas, desafios e sonhos: ${conqu || "uma conquista recente, um desafio superado e um sonho para o futuro"}
+- Valores e jeitinho de ser: ${valores || "curioso(a), carinhoso(a), esforçado(a), criativo(a)"}
+- Detalhes marcantes: ${det || "hábitos, memórias, uma história curtinha vivida na escola"}
+
+Instruções:
+- Escreva a biografia em 1ª pessoa (eu), com 3 a 5 parágrafos curtos (total ~250–350 palavras).
+- Use vocabulário simples, frases diretas e calor humano.
+- Mostre a essência do(a) estudante com exemplos concretos (uma lembrança, um hábito, um lugar preferido).
+- Seja positivo(a) e respeitoso(a); não exponha informações sensíveis nem dados excessivamente pessoais.
+- Evite listas; escreva de forma narrativa.
+
+Escreva agora a biografia completa.`;
+
+    document.getElementById('saidaBio').textContent = promptBio;
+    window.scrollTo({ top: document.getElementById('saidaBio').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function copiar(id){
+    const el = document.getElementById(id);
+    const texto = el.textContent;
+    if(!texto){ return; }
+    navigator.clipboard.writeText(texto).then(()=>{
+      alert('Texto copiado! ✅');
+    });
+  }
+</script>
+
+</body>
+</html>

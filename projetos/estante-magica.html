@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estante Mágica - Escola Terezinha Picoli Cezarotto</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* só um toquezinho para os links dos alunos */
+    .aluno-link{
+      color:#0f2d64;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .aluno-link:hover{
+      color:#1e40af;
+      text-decoration:underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== TOPO COM IMAGEM ===== -->
+<header class="hero-sm">
+  <div class="overlay"></div>
+</header>
+
+<!-- ===== FAIXA AZUL COM NOME DA PÁGINA ===== -->
+<div class="page-ribbon">
+  <div class="container">Estante Mágica</div>
+</div>
+
+<!-- ===== MENU PRINCIPAL ===== -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../institucional.html">Institucional</a>
+  <a href="../ensino.html">Ensino</a>
+  <a href="../projetos.html">Projetos</a>
+  <a href="../eventos.html">Eventos</a>
+  <a href="../recados.html">Recados</a>
+  <a href="../contato.html">Contato</a>
+  <a href="../projetos/historias-ai.html">Gerador de Histórias</a>
+</nav>
+
+<!-- ===== CONTEÚDO ===== -->
+<main class="container">
+  <p>
+    Na <strong>Estante Mágica</strong>, nossas crianças viram autoras de seus próprios livros! Para acessar,
+    procure o nome do aluno e use o <em>passe mágico</em> correspondente. Clique no código para copiar.
+  </p>
+
+  <div class="note" style="margin:14px 0">
+    <strong>Como usar:</strong> acesse a plataforma da Estante Mágica, escolha “Entrar como aluno” e informe o
+    <em>passe mágico</em>. Se houver dúvida, entre em contato com a escola.
+  </div>
+
+  <!-- Busca -->
+  <div class="card" style="margin:14px 0">
+    <label for="filtro">🔎 Buscar aluno</label>
+    <input id="filtro" type="text" placeholder="Digite o nome do aluno para filtrar…">
+    <div id="copiado" style="display:none;margin-top:8px" class="note">Passe copiado! ✅</div>
+  </div>
+
+  <!-- Tabela de acessos -->
+  <div class="card" style="overflow:auto">
+    <table id="tabela" style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:10px;border-bottom:1px solid #e6eaf0">Aluno</th>
+          <th style="text-align:left;padding:10px;border-bottom:1px solid #e6eaf0">Passe Mágico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ANITA BEATRIZ DOS SANTOS CARNEIRO</td><td class="pass">FXD4JJM</td></tr>
+        <tr><td>ANTHONY MANUEL LARA GARCIA</td><td class="pass">FXD4XXM</td></tr>
+        <tr><td>BERNARDO PICOLLI DOS SANTOS</td><td class="pass">UCY6RPW</td></tr>
+        <tr><td>BRENO FELIPE</td><td class="pass">TQH3TSH</td></tr>
+        <tr><td>CAUÃ MENDES PANTOLFI</td><td class="pass">WLM6IDF</td></tr>
+        <tr><td>DAVI HENRIQUE VIANNA DE SOUZA</td><td class="pass">AAP1NGI</td></tr>
+        <tr><td>EMANOELLY DE CASTRO RIGO</td><td class="pass">TCN7HKL</td></tr>
+	<tr><td>EMANOELLY DOS SANTOS PRATES</td><td class="pass">TCN7HKL</td></tr>
+        <tr><td>GABRIEL DA SILVA ARANTES</td><td class="pass">NMU9ASG</td></tr>
+        <tr><td>JULIA OKOPNIK ALEIXO</td><td class="pass">IFZ1UVQ</td></tr>
+        <tr><td>KAMILLA VITÓRIA GONÇALVES DOS SANTOS</td><td class="pass">EFG4YUS</td></tr>
+        <tr><td>KATTY NATALLY ZANOTTO</td><td class="pass">WRL2ZTM</td></tr>
+        <tr><td>KETHLLYN LARISSA SATURNO</td><td class="pass">DQH6AQC</td></tr>
+        <tr><td>LORENZO HENRIQUE MACIEL LINHARES</td><td class="pass">RTS4LNM</td></tr>
+        <tr><td>LÚIS FELIPE MILKIEWICZ TOMAZ</td><td class="pass">CFY3FMC</td></tr>
+        <tr><td>MARIA FERNANDA PEREIRA LOURENÇO</td><td class="pass">ATE1XCL</td></tr>
+        <tr><td>MILENA EDUARDA ANTONELO CARACHO</td><td class="pass">FYS9JAW</td></tr>
+        <tr><td>MILENA GREGOLIN MATTOS</td><td class="pass">YFX5QVL</td></tr>
+        <tr><td>NICOLI DE SOUZA SILVA</td><td class="pass">GXI7HCV</td></tr>
+        <tr><td>RAFAELLA DE CASTRO RIGO</td><td class="pass">SUF7IRF</td></tr>
+        <tr><td>SANDYARA KATTLEYA SOUZA DE CANDIDO</td><td class="pass">YSG4UDI</td></tr>
+        <tr><td>SOPHIA EMANUELE DE LIMA HOFF</td><td class="pass">EZK4ILL</td></tr>
+        <tr><td>VALENTINA VALENTINI CORREIA</td><td class="pass">EQD4EIV</td></tr>
+        <tr><td>YASMIN GOUVEIA MORAIS</td><td class="pass">VHF6SYZ</td></tr>
+        <tr><td>YASMIN NOVAES MULLER</td><td class="pass">JZZ2TYZ</td></tr>
+        <tr><td>YASMIN SILVA BEZERRA</td><td class="pass">HUZ2QYR</td></tr>
+        <tr><td>YURI BALLAN</td><td class="pass">TQS5ZCC</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <strong>Privacidade:</strong> esta lista é para uso pedagógico da escola e famílias. Não compartilhe publicamente.
+  </div>
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+
+<!-- ===== SCRIPTS (busca + copiar passe + link das histórias) ===== -->
+<script>
+  // --- filtro por nome ---
+  const filtro = document.getElementById('filtro');
+  const tbody = document.querySelector('#tabela tbody');
+  filtro.addEventListener('input', () => {
+    const termo = filtro.value.toLowerCase();
+    [...tbody.rows].forEach(row => {
+      const nome = row.cells[0].textContent.toLowerCase();
+      row.style.display = nome.includes(termo) ? '' : 'none';
+    });
+  });
+
+  // --- copiar passe ao clicar ---
+  const aviso = document.getElementById('copiado');
+  tbody.addEventListener('click', (e) => {
+    if(e.target.classList.contains('pass')){
+      const texto = e.target.textContent.trim();
+      navigator.clipboard.writeText(texto).then(() => {
+        aviso.style.display = 'block';
+        setTimeout(()=> aviso.style.display='none', 1200);
+      });
+    }
+  });
+
+  // --- transformar nome em link para a história ---
+  function slugify(str){
+    return str
+      .normalize('NFD')                  // separa acentos
+      .replace(/[\u0300-\u036f]/g,'')    // remove acentos
+      .replace(/ç/gi,'c')
+      .replace(/&/g,' e ')
+      .replace(/[^a-zA-Z0-9]+/g,'-')     // troca não alfanumérico por -
+      .replace(/-+/g,'-')                // colapsa múltiplos -
+      .replace(/^-|-$/g,'')              // tira - do início/fim
+      .toLowerCase();
+  }
+
+// Para cada linha, embrulha o nome com <a href="../historias/<slug>.html">
+[...tbody.rows].forEach(row=>{
+  const cell = row.cells[0];
+  const nomeOriginal = cell.textContent.trim();
+  const slug = slugify(nomeOriginal);
+  const a = document.createElement('a');
+  a.href = '../historias/' + slug + '.html'; // <-- corrigido
+  a.textContent = nomeOriginal;
+  a.className = 'aluno-link';
+  a.title = 'Abrir a história de ' + nomeOriginal;
+  cell.innerHTML = '';
+  cell.appendChild(a);
+});
+
+</script>
+
+</body>
+</html>

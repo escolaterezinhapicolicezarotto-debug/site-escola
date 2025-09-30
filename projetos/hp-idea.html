@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto HP IDEA — Escola Terezinha Picoli Cezarotto</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- ajustes visuais desta página -->
+  <style>
+    .page-ribbon{ background:linear-gradient(90deg,#2563eb,#1e40af); color:#fff; font-weight:700 }
+    .lead{ font-size:1.12rem; line-height:1.65; color:#14325c }
+    .grid{ display:grid; gap:18px }
+    @media(min-width:900px){
+      .grid.cols-2{ grid-template-columns:1fr 1fr }
+      .grid.cols-3{ grid-template-columns:repeat(3,1fr) }
+    }
+
+    /* cartões */
+    .card{
+      background:#fff; border:1px solid #e6eefc; border-radius:16px; padding:18px;
+      box-shadow:0 6px 18px rgba(37,99,235,.08)
+    }
+    .card h2,.card h3{ margin:0 0 8px }
+    .sub{ margin:.5rem 0; color:#213b66; font-weight:700 }
+    .small{ font-size:.94rem; color:#3a536f }
+
+    /* listas e botões */
+    .hero-bullets{ list-style:none; padding-left:0; display:grid; gap:6px; margin:10px 0 0 }
+    .hero-bullets li::before{ content:"• "; color:#1e40af; font-weight:900 }
+    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
+    .btn-secondary{
+      background:#f8fafc;border:1px solid #dbeafe;color:#1e3a8a;
+      padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600
+    }
+    .notice{ background:#fff8e7; border:1px solid #ffe7b0; color:#7a4a00; border-radius:12px; padding:12px 14px }
+
+    /* grades com colunas de mesma altura */
+    .equal-cols > *{ display:flex; flex-direction:column }
+    .equal-cols > * > .card{ height:100%; display:flex; flex-direction:column }
+    .equal-cols .card .fill{ flex:1 } /* empurra o rodapé interno, se houver */
+  </style>
+</head>
+<body>
+
+  <!-- topo com imagem -->
+  <header class="hero-sm"><div class="overlay"></div></header>
+
+  <!-- faixa azul -->
+  <div class="page-ribbon">
+    <div class="container">Projeto: HP IDEA</div>
+  </div>
+
+  <!-- menu -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../institucional.html">Institucional</a>
+    <a href="../ensino.html">Ensino</a>
+    <a href="../projetos.html">Projetos</a>
+    <a href="../eventos.html">Eventos</a>
+    <a href="../recados.html">Recados</a>
+    <a href="../contato.html">Contato</a>
+    <a href="https://hpidea.verdantand.co//" aria-current="page">HP IDEA</a>
+  </nav>
+
+  <!-- conteúdo -->
+  <main class="container">
+
+    <!-- INTRO (cartão único em largura total) -->
+    <section>
+      <div class="card">
+        <h2>O que é o HP IDEA?</h2>
+        <p class="lead">
+          O <strong>HP IDEA</strong> (Inspiring Digital Education and Awareness, programa da HP Foundation) é uma
+          iniciativa internacional que apoia escolas e professores na criação de práticas pedagógicas
+          inovadoras, inclusivas e sustentáveis, com foco em <strong>aprendizagem digital</strong>,
+          <strong>metodologias ativas</strong> e <strong>impacto social</strong>.
+        </p>
+        <p>
+          No Brasil (<strong>HP IDEA BRA</strong>), ele funciona como um <strong>laboratório de inovação educacional</strong>:
+          as escolas participantes escolhem <strong>desafios reais do seu contexto</strong> e desenvolvem
+          <em>projetos mínimos viáveis (MVPs)</em> para testá-los com os alunos.
+        </p>
+
+        <h3 class="sub">HP IDEA na Escola Terezinha Picoli Cezarotto</h3>
+        <p>Na nossa escola, o programa está estruturado em três inovações principais:</p>
+        <ul class="hero-bullets">
+          <li><strong>Robótica Sustentável Inclusiva</strong> – uso de sucata eletrônica e kits de baixo custo para engajar alunos em Ciências e Tecnologia, com ajustes sensoriais para inclusão de estudantes autistas.</li>
+          <li><strong>Criação de histórias com apoio da IA</strong> – um Clube de Leitura Digital Inclusivo que combina livros físicos, táteis e digitais, rodas de leitura e produção de narrativas com inteligência artificial.</li>
+          <li><strong>Robótica Verde Sensorial</strong> – desenvolvimento de protótipos interativos com luz, som e vibração suaves, promovendo sustentabilidade, protagonismo estudantil e inclusão sensorial.</li>
+        </ul>
+
+        <h3 class="sub">Práticas e Metodologias</h3>
+        <p>
+          O programa combina <strong>HLTPs</strong> (High-Leverage Teaching Practices / Práticas de Ensino de Alto Impacto)
+          e <strong>TFU</strong> (Teaching for Understanding / Ensino para Compreensão), buscando resultados como:
+        </p>
+        <ul class="hero-bullets">
+          <li>Maior engajamento dos alunos;</li>
+          <li>Desenvolvimento de competências digitais, cognitivas e socioemocionais;</li>
+          <li>Fortalecimento da consciência ambiental;</li>
+          <li>Inclusão efetiva de estudantes com necessidades educacionais especiais.</li>
+        </ul>
+
+        <p style="margin-top:15px; font-weight:600">
+          👉 Em resumo: o HP IDEA é um programa de inovação educacional da HP, que ajuda professores a transformar
+          suas práticas de ensino com tecnologia, sustentabilidade e inclusão, criando soluções reais para os
+          desafios da escola e da comunidade.
+        </p>
+
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn" href="https://hpidea.verdantand.co" target="_blank" rel="noopener">Acessar plataforma</a>
+          <a class="btn-secondary" href="mailto:escolaterezinhapicolicezarotto@gmai.com?subject=HP%20IDEA%20-%20Solicitar%20acesso">Solicitar acesso / suporte</a>
+        </div>
+        <p class="small" style="margin-top:6px">A plataforma abre em uma nova aba.</p>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section class="card" style="margin-top:18px">
+      <h3>Objetivos</h3>
+
+      <div class="grid cols-2 equal-cols">
+        <div>
+          <div class="card">
+            <h4 class="sub">🎯 Objetivos Gerais</h4>
+            <ul class="hero-bullets">
+              <li>Transformar a escola em um espaço inovador, inclusivo e sustentável.</li>
+              <li>Melhorar engajamento, leitura, escrita, habilidades de pesquisa e competências digitais e ambientais dos alunos do 4º e 5º ano.</li>
+              <li>Garantir inclusão efetiva de estudantes do AEE (especialmente autistas e com necessidades sensoriais).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h4 class="sub">✅ Objetivos de Curto Prazo</h4>
+            <ul class="hero-bullets">
+              <li>Montar kits de <strong>Robótica Sustentável Inclusiva</strong> com sucata eletrônica segura.</li>
+              <li>Iniciar o <strong>Clube de Leitura Digital Inclusivo</strong> (livros táteis, digitais e criação de histórias com IA).</li>
+              <li>Realizar oficinas-piloto de <strong>Robótica Verde Sensorial</strong> (luz, som e vibração ajustáveis).</li>
+              <li>Coletar e analisar dados (engajamento, participação, relatos de alunos, observações de professores).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sub" style="margin-top:12px">🌍 Objetivo de Longo Prazo</h4>
+      <p class="small" style="margin-top:6px">
+        Tornar a escola referência em práticas pedagógicas inovadoras, inclusivas e sustentáveis, garantindo que os alunos:
+      </p>
+      <ul class="hero-bullets">
+        <li>desenvolvam autonomia e protagonismo;</li>
+        <li>ampliem competências de leitura, escrita, pesquisa, criatividade e consciência ambiental;</li>
+        <li>estejam mais preparados para os desafios acadêmicos e sociais do futuro.</li>
+      </ul>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="card" style="margin-top:18px">
+      <h3>Como funciona</h3>
+      <p>
+        O HP IDEA funciona como um <strong>laboratório de inovação educacional em etapas</strong>. Ele guia escolas e
+        professores por um processo estruturado que vai da identificação de desafios até a aplicação prática de
+        soluções (<em>MVPs — Minimum Viable Products</em>).
+      </p>
+
+      <h4 class="sub">🔄 Etapas principais do funcionamento</h4>
+      <ul class="hero-bullets">
+        <li><strong>Identificação do desafio</strong> — análise de problemas reais (ex.: baixo engajamento em Ciências e Tecnologia, inclusão sensorial para autistas, sustentabilidade); entrevistas, observações e documentos para mapear necessidades.</li>
+        <li><strong>Definição da Teoria da Ação</strong> — perguntas de investigação (ex.: “Como melhorar engajamento, leitura e competências digitais e ambientais por meio da Robótica Sustentável, Criação de Histórias com IA e Robótica Verde Sensorial?”) e resultados esperados.</li>
+        <li><strong>Planejamento da Inovação (MVP)</strong> — escolha do MVP (kits de robótica com sucata, clube de leitura com IA, robótica sensorial), definição de turmas (4º/5º ano + AEE) e organização de cronograma e papéis.</li>
+        <li><strong>Implementação em oficinas</strong> — grupos pequenos constroem protótipos, criam histórias, testam sensores; professores dão feedback e ajustam atividades.</li>
+        <li><strong>Coleta de evidências</strong> — fotos/vídeos, entrevistas, questionários e observações para medir engajamento, inclusão, protagonismo e consciência ambiental.</li>
+        <li><strong>Socialização e aprimoramento</strong> — apresentação em feiras/mostras, reflexão da equipe e definição de próximos passos para escalar o projeto.</li>
+      </ul>
+
+      <p style="margin-top:10px"><strong>👉 Em resumo:</strong> o HP IDEA é um ciclo de inovação educacional — <em>problema → planejamento → teste (MVP) → coleta de dados → ajustes → expansão</em>.</p>
+    </section>
+
+    <!-- RESULTADOS ESPERADOS (3 cartões iguais) -->
+    <section style="margin-top:18px">
+      <div class="grid cols-3 equal-cols">
+        <div>
+          <div class="card">
+            <h3>Resultados esperados — Alunos</h3>
+            <div class="fill">
+              <ul class="hero-bullets">
+                <li>Maior engajamento e participação nas aulas de Ciências, Tecnologia e Leitura.</li>
+                <li>Aumento do interesse por <strong>STEM</strong>.</li>
+                <li>Inclusão efetiva de alunos do AEE com estímulos sensoriais ajustáveis.</li>
+                <li>Competências digitais (Tinkercad, Scratch, Arduino, leitura digital).</li>
+                <li>Melhora em leitura e escrita (mais histórias e fluência leitora).</li>
+                <li>Protagonismo estudantil em feiras e eventos.</li>
+                <li>Consciência ambiental (reaproveitamento de sucata e práticas verdes).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Resultados esperados — Escola</h3>
+            <div class="fill">
+              <ul class="hero-bullets">
+                <li>Referência em inovação educacional inclusiva e sustentável.</li>
+                <li>Professores capacitados em metodologias ativas e tecnologias digitais.</li>
+                <li>Colaboração e interdisciplinaridade fortalecidas (Ciências, Matemática, Artes, Sustentabilidade).</li>
+                <li>Maior visibilidade em eventos locais e nacionais.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Resultados esperados — Comunidade</h3>
+            <div class="fill">
+              <ul class="hero-bullets">
+                <li>Famílias mais presentes (leituras, oficinas, acompanhamento de frequência).</li>
+                <li>Disseminação de práticas sustentáveis (reaproveitamento de eletrônicos/óleo).</li>
+                <li>Valorização da escola como espaço de inovação, inclusão e sustentabilidade.</li>
+              </ul>
+
+              <h4 class="sub" style="margin-top:10px">📊 Indicadores</h4>
+              <ul class="hero-bullets">
+                <li>Percentual de alunos que participam ativamente;</li>
+                <li>Número de protótipos funcionais apresentados;</li>
+                <li>Quantidade de histórias criadas com apoio da IA;</li>
+                <li>Relatos de alunos sobre motivação e inclusão;</li>
+                <li>Observações de professores sobre colaboração e expressão oral.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE ENVOLVIDA (2 cartões iguais) -->
+    <section style="margin-top:18px">
+      <div class="grid cols-2 equal-cols">
+        <div>
+          <div class="card">
+            <h3>Equipe envolvida — Papéis na escola</h3>
+            <div class="fill">
+              <ul class="hero-bullets">
+                <li><strong>Coordenação Pedagógica</strong>: organização geral do projeto;</li>
+                <li><strong>Professor(a) de Tecnologia/Robótica</strong>: mediação dos encontros;</li>
+                <li><strong>Docentes das turmas</strong>: integração com a sala de aula;</li>
+                <li><strong>Monitores/estagiários</strong>: apoio às oficinas e à plataforma.</li>
+              </ul>
+     	    
+	    <h5 class="sub">🏫 Estrutura</h5>
+              <ul class="hero-bullets">
+                <li>522 alunos regulares</li>
+                <li>40 alunos no projeto de Robótica</li>
+                <li>23 alunos na SRM</li>
+                <li>32 professores</li>
+                <li>10 servidores</li>
+              </ul>
+
+              <h5 class="sub">🤝 Comunidade</h5>
+              <ul class="hero-bullets">
+                <li>Famílias, servidores e equipe AEE (adaptações sensoriais para alunos autistas).</li>
+              </ul>
+              <p class="small">Interessados em apoiar: <a href="mailto:escolaterezinhapicolicezarotto@gmai.com">escolaterezinhapicolicezarotto@gmai.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Equipe envolvida — HP IDEA Brasil</h3>
+            <div class="fill">
+              <p class="small"><strong>Escola Municipal Terezinha Picoli Cezarotto – Cascavel/PR</strong><br>
+                Composição plural: professoras, orientadores acadêmicos, colaboradores, servidores, estudantes e comunidade escolar — garantindo práticas inovadoras, inclusivas e sustentáveis.</p>
+
+              <h5 class="sub">👩‍🏫 Professoras envolvidas</h5>
+              <ul class="hero-bullets">
+                <li>Angela Maria de Souza</li>
+                <li>Daniele Hamud Lima Meira</li>
+                <li>Tamires Garcia Oliveira</li>
+                <li>Elaine de Souza dos Santos Ramos</li>
+                <li>Edina Ferreira Figueiredo</li>
+                <li>Sabrina dos Santos Fernandes</li>
+                <li>Rosenilda Cordeiro Souza</li>
+              </ul>
+
+              <h5 class="sub">👨‍🏫 Orientadores/colaboradores</h5>
+              <ul class="hero-bullets">
+                <li>Anderson da Silva Marcolino</li>
+                <li>André Augusto Bortoli</li>
+              </ul>
+
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRILHAS (2 cartões iguais) -->
+    <section style="margin-top:18px">
+      <div class="grid cols-2 equal-cols">
+        <div>
+          <div class="card">
+            <h3>Trilhas e oficinas</h3>
+            <div class="fill">
+              <p class="small">Exemplos de trilhas trabalhadas com os estudantes:</p>
+              <ul class="hero-bullets">
+                <li><strong>Ideação:</strong> mapa de empatia, brainstorming, definição do desafio;</li>
+                <li><strong>Prototipagem:</strong> modelos com papelão, recicláveis e materiais simples;</li>
+                <li><strong>Programação:</strong> jogos e animações no Scratch, automações básicas;</li>
+                <li><strong>Comunicação:</strong> storytelling, design de slides e apresentação de pitch;</li>
+                <li><strong>Cidadania Digital:</strong> segurança, ética e uso crítico da informação.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Resultados (síntese)</h3>
+            <div class="fill">
+              <ul class="hero-bullets">
+                <li>Protótipos funcionais e apresentações públicas (<em>pitch</em>);</li>
+                <li>Portfólios digitais dos alunos (relatos, fotos e vídeos);</li>
+                <li>Indicadores de participação, engajamento e habilidades.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card" style="margin-top:18px">
+      <h3>Perguntas frequentes (FAQ)</h3>
+
+      <details>
+        <summary>Quem pode participar?</summary>
+        <p>Estudantes do 3º ao 5º ano do Ensino Fundamental I. A seleção pode considerar
+          interesse, disponibilidade e indicação dos professores.</p>
+      </details>
+
+      <details>
+        <summary>É necessário computador em casa?</summary>
+        <p>Não. Todas as atividades essenciais são realizadas nos encontros presenciais e
+          na plataforma, com acesso supervisionado na escola.</p>
+      </details>
+
+      <details>
+        <summary>Como as famílias acompanham?</summary>
+        <p>As famílias recebem comunicados e podem acessar os portfólios dos alunos para
+          acompanhar a evolução e os produtos criados.</p>
+      </details>
+    </section>
+
+    <section class="notice" style="margin-top:18px">
+      <strong>Dica:</strong> para atualizar o acesso dos estudantes, use o botão
+      <em>“Acessar plataforma”</em> acima ou envie uma mensagem para
+      <a href="mailto:escolaterezinhapicolicezarotto@gmai.com">escolaterezinhapicolicezarotto@gmai.com</a>.
+    </section>
+
+    <div class="btn-row" style="margin:18px 0 4px">
+      <a class="btn" href="https://hpidea.verdantand.co" target="_blank" rel="noopener">Acessar plataforma</a>
+      <a class="btn-secondary" href="../projetos.html">Voltar para Projetos</a>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <!-- WhatsApp -->
+  <a class="whatsapp-btn" href="https://wa.me/554539021479" target="_blank">💬</a>
+</body>
+</html>
