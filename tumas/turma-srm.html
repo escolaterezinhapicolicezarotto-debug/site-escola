@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRM- Escola Terezinha Picoli Cezarotto</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .page-ribbon{
+      background: linear-gradient(90deg,#2563eb,#1e40af);
+      color:#fff;font-weight:600;letter-spacing:.3px
+    }
+    .turma-intro{
+      background:#f0f6ff;border:1px solid #d6e4ff;border-radius:12px;
+      padding:14px 16px;margin:14px 0 6px
+    }
+    .alunos-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+      gap:18px;margin-top:16px
+    }
+    .aluno{
+      background:#fff;border:1px solid #e6eefc;border-radius:16px;
+      padding:14px 12px;text-align:center;
+      box-shadow:0 4px 10px rgba(37,99,235,.08);
+      transition:transform .2s, box-shadow .2s, border-color .2s
+    }
+    .aluno:hover{transform:translateY(-3px);border-color:#bcd0ff;
+      box-shadow:0 8px 18px rgba(37,99,235,.13)}
+    .aluno img{
+      width:100%;max-width:180px;aspect-ratio:1/1;object-fit:cover;
+      border-radius:14px;border:3px solid #1e40af22;
+      transition:border-color .2s;cursor:zoom-in
+    }
+    .aluno:hover img{border-color:#2563eb55}
+    .aluno h3{margin:10px 0 0;font-size:1rem;line-height:1.2}
+
+    /* Lightbox */
+    .lightbox-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+      z-index:9999;align-items:center;justify-content:center;padding:24px}
+    .lightbox-backdrop.open{display:flex;animation:fadeIn .15s ease}
+    .lightbox{max-width:min(92vw,1200px);max-height:90vh;border-radius:12px;
+      overflow:hidden;background:#000;position:relative}
+    .lightbox img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain}
+    .close-btn{position:absolute;top:8px;right:8px;background:#111827cc;color:#fff;
+      border:none;border-radius:10px;font-size:14px;padding:8px 10px;cursor:pointer}
+    .caption{position:absolute;left:0;right:0;bottom:0;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));
+      color:#fff;padding:24px 16px 14px;font-size:14px;text-align:center}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  </style>
+</head>
+<body>
+
+  <header class="hero-sm"><div class="overlay"></div></header>
+
+  <div class="page-ribbon">
+    <div class="container">Sala de Recurso Multifuncional</div>
+  </div>
+
+  <nav>
+      	<a href="../index.html">Home</a>
+  	<a href="../institucional.html">Institucional</a>
+ 	<a href="../ensino.html">Ensino</a>
+  	<a href="../projetos.html">Projetos</a>
+  	<a href="../eventos.html">Eventos</a>
+  	<a href="../recados.html">Recados</a>
+  	<a href="../contato.html">Contato</a>
+    <a href="#" aria-current="page">SRM</a>
+  </nav>
+
+  <main class="container">
+    <div class="turma-intro">
+      Turma do período da <strong>manhã</strong>. Clique em uma foto para ampliá-la em tela cheia.
+    </div>
+
+<div class="alunos-grid">
+  <!-- 7 SRM A -->
+  <div class="aluno"><img src="../img/alunos/Enzo-Gabriel-da-Costa.jpg" alt="Enzo Gabriel da Costa" data-caption="Enzo Gabriel da Costa"><p>Enzo Gabriel da Costa</p></div>
+  <div class="aluno"><img src="../img/alunos/Luana-Maria-Barbosa-dos-Santos.jpg" alt="Luana Maria Barbosa dos Santos" data-caption="Luana Maria Barbosa dos Santos"><p>Luana Maria Barbosa dos Santos</p></div>
+  <div class="aluno"><img src="../img/alunos/Mathias-Rottava.jpg" alt="Mathias Rottava" data-caption="Mathias Rottava"><p>Mathias Rottava</p></div>
+
+  <!-- 7 SRM B -->
+  <div class="aluno"><img src="../img/alunos/Danilo-Oliveira-Galante.jpg" alt="Danilo Oliveira Galante" data-caption="Danilo Oliveira Galante"><p>Danilo Oliveira Galante</p></div>
+  <div class="aluno"><img src="../img/alunos/Davi-Lucas-Soares-Barbosa.jpg" alt="Davi Lucas Soares Barbosa" data-caption="Davi Lucas Soares Barbosa"><p>Davi Lucas Soares Barbosa</p></div>
+  <div class="aluno"><img src="../img/alunos/Isaac-Costa.jpg" alt="Isaac Costa" data-caption="Isaac Costa"><p>Isaac Costa</p></div>
+  <div class="aluno"><img src="../img/alunos/Kiara-Katarina-Knebel.jpg" alt="Kiara Katarina Knebel" data-caption="Kiara Katarina Knebel"><p>Kiara Katarina Knebel</p></div>
+
+  <!-- 7 SRM C -->
+  <div class="aluno"><img src="../img/alunos/Cristofer-de-Araujo-Bravo.jpg" alt="Cristofer de Araujo Bravo" data-caption="Cristofer de Araujo Bravo"><p>Cristofer de Araujo Bravo</p></div>
+
+  <!-- 7 SRM D -->
+  <div class="aluno"><img src="../img/alunos/Brayan-Lorenzo-do-Prado.jpg" alt="Brayan Lorenzo do Prado" data-caption="Brayan Lorenzo do Prado"><p>Brayan Lorenzo do Prado</p></div>
+  <div class="aluno"><img src="../img/alunos/Breno-Felipe.jpg" alt="Breno Felipe" data-caption="Breno Felipe"><p>Breno Felipe</p></div>
+  <div class="aluno"><img src="../img/alunos/Miguel-Antonio-Greff-Biasi.jpg" alt="Miguel Antônio Greff Biasi" data-caption="Miguel Antônio Greff Biasi"><p>Miguel Antônio Greff Biasi</p></div>
+
+  <!-- 7 SRM E -->
+  <div class="aluno"><img src="../img/alunos/Nycollas-Canuto-Dias.jpg" alt="Nycollas Canuto Dias" data-caption="Nycollas Canuto Dias"><p>Nycollas Canuto Dias</p></div>
+  <div class="aluno"><img src="../img/alunos/Theo-Alchieri-Ribeiro.jpg" alt="Theo Alchieri Ribeiro" data-caption="Theo Alchieri Ribeiro"><p>Theo Alchieri Ribeiro</p></div>
+  <div class="aluno"><img src="../img/alunos/Thomas-Achre-Zancettin.jpg" alt="Thomas Achre Zancettin" data-caption="Thomas Achre Zancettin"><p>Thomas Achre Zancettin</p></div>
+  <div class="aluno"><img src="../img/alunos/Tyler-Alves-Padilha.jpg" alt="Tyler Alves Padilha" data-caption="Tyler Alves Padilha"><p>Tyler Alves Padilha</p></div>
+
+  <!-- 7 SRM F -->
+  <div class="aluno"><img src="../img/alunos/Benjamin-Freiria-Zimmermann.jpg" alt="Benjamin Freiria Zimmermann" data-caption="Benjamin Freiria Zimmermann"><p>Benjamin Freiria Zimmermann</p></div>
+  <div class="aluno"><img src="../img/alunos/Livia-de-Oliveira.jpg" alt="Livia de Oliveira" data-caption="Livia de Oliveira"><p>Livia de Oliveira</p></div>
+  <div class="aluno"><img src="../img/alunos/Lorenzo-Henrique-Maciel-Linhares.jpg" alt="Lorenzo Henrique Maciel Linhares" data-caption="Lorenzo Henrique Maciel Linhares"><p>Lorenzo Henrique Maciel Linhares</p></div>
+  <div class="aluno"><img src="../img/alunos/Pedro-Shinayder-da-Silva-Sousa.jpg" alt="Pedro Shinayder da Silva Sousa" data-caption="Pedro Shinayder da Silva Sousa"><p>Pedro Shinayder da Silva Sousa</p></div>
+
+  <!-- 7 SRM G -->
+  <div class="aluno"><img src="../img/alunos/Theo-Dolinski-Ferreira.jpg" alt="Théo Dolinski Ferreira" data-caption="Théo Dolinski Ferreira"><p>Théo Dolinski Ferreira</p></div>
+
+  <!-- 7 SRM H -->
+  <div class="aluno"><img src="../img/alunos/Joao-Henrique-Hirt-Paterno.jpg" alt="João Henrique Hirt Paterno" data-caption="João Henrique Hirt Paterno"><p>João Henrique Hirt Paterno</p></div>
+  <div class="aluno"><img src="../img/alunos/Kadu-Miguel-de-Oliveira.jpg" alt="Kadu Miguel de Oliveira" data-caption="Kadu Miguel de Oliveira"><p>Kadu Miguel de Oliveira</p></div>
+  <div class="aluno"><img src="../img/alunos/Leonardo-Perius-Timidati.jpg" alt="Leonardo Perius Timidati" data-caption="Leonardo Perius Timidati"><p>Leonardo Perius Timidati</p></div>
+</div>
+
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop" onclick="fecharLightbox(event)">
+    <div class="lightbox">
+      <button class="close-btn" onclick="fecharLightbox(event)">Fechar ✕</button>
+      <img id="lightboxImg" alt="">
+      <div class="caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.aluno img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        const src=img.getAttribute('src');
+        const alt=img.getAttribute('alt')||'';
+        const caption=img.dataset.caption||alt;
+        document.getElementById('lightboxImg').src=src;
+        document.getElementById('lightboxCaption').textContent=caption;
+        document.getElementById('lightboxBackdrop').classList.add('open');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function fecharLightbox(e){
+      if(!e || e.target.id==='lightboxBackdrop' || e.target.tagName==='BUTTON'){
+        document.getElementById('lightboxBackdrop').classList.remove('open');
+        document.body.style.overflow='';
+      }
+    }
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharLightbox(); });
+  </script>
+</body>
+</html>

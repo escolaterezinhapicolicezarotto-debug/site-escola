@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1º Ano C - Escola Terezinha Picoli Cezarotto</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .page-ribbon{
+      background: linear-gradient(90deg,#2563eb,#1e40af);
+      color:#fff;font-weight:600;letter-spacing:.3px
+    }
+    .turma-intro{
+      background:#f0f6ff;border:1px solid #d6e4ff;border-radius:12px;
+      padding:14px 16px;margin:14px 0 6px
+    }
+    .alunos-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+      gap:18px;margin-top:16px
+    }
+    .aluno{
+      background:#fff;border:1px solid #e6eefc;border-radius:16px;
+      padding:14px 12px;text-align:center;
+      box-shadow:0 4px 10px rgba(37,99,235,.08);
+      transition:transform .2s, box-shadow .2s, border-color .2s
+    }
+    .aluno:hover{transform:translateY(-3px);border-color:#bcd0ff;
+      box-shadow:0 8px 18px rgba(37,99,235,.13)}
+    .aluno img{
+      width:100%;max-width:180px;aspect-ratio:1/1;object-fit:cover;
+      border-radius:14px;border:3px solid #1e40af22;
+      transition:border-color .2s;cursor:zoom-in
+    }
+    .aluno:hover img{border-color:#2563eb55}
+    .aluno h3{margin:10px 0 0;font-size:1rem;line-height:1.2}
+
+    /* Lightbox */
+    .lightbox-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+      z-index:9999;align-items:center;justify-content:center;padding:24px}
+    .lightbox-backdrop.open{display:flex;animation:fadeIn .15s ease}
+    .lightbox{max-width:min(92vw,1200px);max-height:90vh;border-radius:12px;
+      overflow:hidden;background:#000;position:relative}
+    .lightbox img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain}
+    .close-btn{position:absolute;top:8px;right:8px;background:#111827cc;color:#fff;
+      border:none;border-radius:10px;font-size:14px;padding:8px 10px;cursor:pointer}
+    .caption{position:absolute;left:0;right:0;bottom:0;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));
+      color:#fff;padding:24px 16px 14px;font-size:14px;text-align:center}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  </style>
+</head>
+<body>
+
+  <header class="hero-sm"><div class="overlay"></div></header>
+
+  <div class="page-ribbon">
+    <div class="container">1º Ano C</div>
+  </div>
+
+  <nav>
+      	<a href="../index.html">Home</a>
+  	<a href="../institucional.html">Institucional</a>
+ 	<a href="../ensino.html">Ensino</a>
+  	<a href="../projetos.html">Projetos</a>
+  	<a href="../eventos.html">Eventos</a>
+  	<a href="../recados.html">Recados</a>
+  	<a href="../contato.html">Contato</a>
+    <a href="#" aria-current="page">1º Ano "C"</a>
+  </nav>
+
+  <main class="container">
+    <div class="turma-intro">
+      Turma do período da <strong>tarde</strong>. Clique em uma foto para ampliá-la em tela cheia.
+    </div>
+
+<div class="alunos-grid">
+      <div class="aluno"><img src="../img/alunos/Alicia-Bazei-Nunes.jpg" alt="Alícia Bazei Nunes" data-caption="Alícia Bazei Nunes"><h3>ALÍCIA BAZEI NUNES</h3></div>
+      <div class="aluno"><img src="../img/alunos/Bianca-Yuna-Omori.jpg" alt="Bianca Yuna Omori" data-caption="Bianca Yuna Omori"><h3>BIANCA YUNA OMORI</h3></div>
+      <div class="aluno"><img src="../img/alunos/Cecilia-Antonela-Alves-Juliane.jpg" alt="Cecília Antonela Alves Juliane" data-caption="Cecília Antonela Alves Juliane"><h3>CECÍLIA ANTONELA ALVES JULIANE</h3></div>
+      <div class="aluno"><img src="../img/alunos/Dafyne-Victoria-Mariano-de-Oliveira.jpg" alt="Dafyne Victória Mariano de Oliveira" data-caption="Dafyne Victória Mariano de Oliveira"><h3>DAFYNE VICTÓRIA MARIANO DE OLIVEIRA</h3></div>
+      <div class="aluno"><img src="../img/alunos/Daniel-Lima-de-Oliveira.jpg" alt="Daniel Lima de Oliveira" data-caption="Daniel Lima de Oliveira"><h3>DANIEL LIMA DE OLIVEIRA</h3></div>
+      <div class="aluno"><img src="../img/alunos/Davi-Lucas-Soares-Barbosa.jpg" alt="Davi Lucas Soares Barbosa" data-caption="Davi Lucas Soares Barbosa"><h3>DAVI LUCAS SOARES BARBOSA</h3></div>
+      <div class="aluno"><img src="../img/alunos/Dennysmar-Angelina-Fernandez-Martinez.jpg" alt="Dennysmar Angelina Fernandez Martinez" data-caption="Dennysmar Angelina Fernandez Martinez"><h3>DENNYSMAR ANGELINA FERNANDEZ MARTINEZ</h3></div>
+      <div class="aluno"><img src="../img/alunos/Enzo-Gabriel-Ribeiro-de-Almeida.jpg" alt="Enzo Gabriel Ribeiro de Almeida" data-caption="Enzo Gabriel Ribeiro de Almeida"><h3>ENZO GABRIEL RIBEIRO DE ALMEIDA</h3></div>
+      <div class="aluno"><img src="../img/alunos/Felipe-Oliveira-Viel.jpg" alt="Felipe Oliveira Viel" data-caption="Felipe Oliveira Viel"><h3>FELIPE OLIVEIRA VIEL</h3></div>
+      <div class="aluno"><img src="../img/alunos/Gabrielly-Kehbein-Goncalves.jpg" alt="Gabrielly Kehbein Gonçalves" data-caption="Gabrielly Kehbein Gonçalves"><h3>GABRIELLY KEHBEIN GONÇALVES</h3></div>
+      <div class="aluno"><img src="../img/alunos/Gustavo-Fontana-Diogo.jpg" alt="Gustavo Fontana Diogo" data-caption="Gustavo Fontana Diogo"><h3>GUSTAVO FONTANA DIOGO</h3></div>
+      <div class="aluno"><img src="../img/alunos/Isabela-Kozloski-Ost.jpg" alt="Isabela Kozloski Ost" data-caption="Isabela Kozloski Ost"><h3>ISABELA KOZLOSKI OST</h3></div>
+      <div class="aluno"><img src="../img/alunos/Joao-Miguel-Leal-Moglie.jpg" alt="João Miguel Leal Moglie" data-caption="João Miguel Leal Moglie"><h3>JOÃO MIGUEL LEAL MOGLIE</h3></div>
+      <div class="aluno"><img src="../img/alunos/Joao-Victor-da-Silva-Alves-Moraiz.jpg" alt="João Victor da Silva Alves Moraiz" data-caption="João Victor da Silva Alves Moraiz"><h3>JOÃO VICTOR DA SILVA ALVES MORAIZ</h3></div>
+      <div class="aluno"><img src="../img/alunos/Kiara-Katarina-Knebel.jpg" alt="Kiara Katarina Knebel" data-caption="Kiara Katarina Knebel"><h3>KIARA KATARINA KNEBEL</h3></div>
+      <div class="aluno"><img src="../img/alunos/Laura-Bonamigo-Scorsato.jpg" alt="Laura Bonamigo Scorsato" data-caption="Laura Bonamigo Scorsato"><h3>LAURA BONAMIGO SCORSATO</h3></div>
+      <div class="aluno"><img src="../img/alunos/Lavinia-Antonella-Mendo.jpg" alt="Lavínia Antonella Mendo" data-caption="Lavínia Antonella Mendo"><h3>LAVÍNIA ANTONELLA MENDO</h3></div>
+      <div class="aluno"><img src="../img/alunos/Luisa-Machado.jpg" alt="Luisa Machado" data-caption="Luisa Machado"><h3>LUISA MACHADO</h3></div>
+      <div class="aluno"><img src="../img/alunos/Miguel-de-Oliveira-Ramalho.jpg" alt="Miguel de Oliveira Ramalho" data-caption="Miguel de Oliveira Ramalho"><h3>MIGUEL DE OLIVEIRA RAMALHO</h3></div>
+      <div class="aluno"><img src="../img/alunos/Naythan-Ivan-Navarro-Charles.jpg" alt="Naythan Ivan Navarro Charles" data-caption="Naythan Ivan Navarro Charles"><h3>NAYTHAN IVAN NAVARRO CHARLES</h3></div>
+      <div class="aluno"><img src="../img/alunos/Raymundo-Asafe-Ferreira-Santos.jpg" alt="Raymundo Asafe Ferreira Santos" data-caption="Raymundo Asafe Ferreira Santos"><h3>RAYMUNDO ASAFE FERREIRA SANTOS</h3></div>
+      <div class="aluno"><img src="../img/alunos/Rebeca-Louise-Peres-Leal.jpg" alt="Rebeca Louise Peres Leal" data-caption="Rebeca Louise Peres Leal"><h3>REBECA LOUISE PERES LEAL</h3></div>
+      <div class="aluno"><img src="../img/alunos/Samuel-Henrique-Monteiro-da-Silva.jpg" alt="Samuel Henrique Monteiro da Silva" data-caption="Samuel Henrique Monteiro da Silva"><h3>SAMUEL HENRIQUE MONTEIRO DA SILVA</h3></div>
+      <div class="aluno"><img src="../img/alunos/Vinicius-Rodrigues-Dai-Pra.jpg" alt="Vinicius Rodrigues Dai Pra" data-caption="Vinicius Rodrigues Dai Pra"><h3>VINICIUS RODRIGUES DAI PRA</h3></div>
+       </div>
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop" onclick="fecharLightbox(event)">
+    <div class="lightbox">
+      <button class="close-btn" onclick="fecharLightbox(event)">Fechar ✕</button>
+      <img id="lightboxImg" alt="">
+      <div class="caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.aluno img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        const src=img.getAttribute('src');
+        const alt=img.getAttribute('alt')||'';
+        const caption=img.dataset.caption||alt;
+        document.getElementById('lightboxImg').src=src;
+        document.getElementById('lightboxCaption').textContent=caption;
+        document.getElementById('lightboxBackdrop').classList.add('open');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function fecharLightbox(e){
+      if(!e || e.target.id==='lightboxBackdrop' || e.target.tagName==='BUTTON'){
+        document.getElementById('lightboxBackdrop').classList.remove('open');
+        document.body.style.overflow='';
+      }
+    }
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharLightbox(); });
+  </script>
+</body>
+</html>

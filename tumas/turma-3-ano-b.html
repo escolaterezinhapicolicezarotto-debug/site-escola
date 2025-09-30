@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3º Ano "B"- Escola Terezinha Picoli Cezarotto</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .page-ribbon{
+      background: linear-gradient(90deg,#2563eb,#1e40af);
+      color:#fff;font-weight:600;letter-spacing:.3px
+    }
+    .turma-intro{
+      background:#f0f6ff;border:1px solid #d6e4ff;border-radius:12px;
+      padding:14px 16px;margin:14px 0 6px
+    }
+    .alunos-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+      gap:18px;margin-top:16px
+    }
+    .aluno{
+      background:#fff;border:1px solid #e6eefc;border-radius:16px;
+      padding:14px 12px;text-align:center;
+      box-shadow:0 4px 10px rgba(37,99,235,.08);
+      transition:transform .2s, box-shadow .2s, border-color .2s
+    }
+    .aluno:hover{transform:translateY(-3px);border-color:#bcd0ff;
+      box-shadow:0 8px 18px rgba(37,99,235,.13)}
+    .aluno img{
+      width:100%;max-width:180px;aspect-ratio:1/1;object-fit:cover;
+      border-radius:14px;border:3px solid #1e40af22;
+      transition:border-color .2s;cursor:zoom-in
+    }
+    .aluno:hover img{border-color:#2563eb55}
+    .aluno h3{margin:10px 0 0;font-size:1rem;line-height:1.2}
+
+    /* Lightbox */
+    .lightbox-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+      z-index:9999;align-items:center;justify-content:center;padding:24px}
+    .lightbox-backdrop.open{display:flex;animation:fadeIn .15s ease}
+    .lightbox{max-width:min(92vw,1200px);max-height:90vh;border-radius:12px;
+      overflow:hidden;background:#000;position:relative}
+    .lightbox img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain}
+    .close-btn{position:absolute;top:8px;right:8px;background:#111827cc;color:#fff;
+      border:none;border-radius:10px;font-size:14px;padding:8px 10px;cursor:pointer}
+    .caption{position:absolute;left:0;right:0;bottom:0;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));
+      color:#fff;padding:24px 16px 14px;font-size:14px;text-align:center}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  </style>
+</head>
+<body>
+
+  <header class="hero-sm"><div class="overlay"></div></header>
+
+  <div class="page-ribbon">
+    <div class="container">3º Ano "B"</div>
+  </div>
+
+  <nav>
+      	<a href="../index.html">Home</a>
+  	<a href="../institucional.html">Institucional</a>
+ 	<a href="../ensino.html">Ensino</a>
+  	<a href="../projetos.html">Projetos</a>
+  	<a href="../eventos.html">Eventos</a>
+  	<a href="../recados.html">Recados</a>
+  	<a href="../contato.html">Contato</a>
+    <a href="#" aria-current="page">3º Ano "B"</a>
+  </nav>
+
+  <main class="container">
+    <div class="turma-intro">
+      Turma do período da <strong>tarde</strong>. Clique em uma foto para ampliá-la em tela cheia.
+    </div>
+
+ <div class="alunos-grid">
+  <div class="aluno"><img src="../img/alunos/Alice-Vitoria-Felipini.jpg" alt="Alice Vitória Felipini" data-caption="Alice Vitória Felipini"><h3>ALICE VITÓRIA FELIPINI</h3></div>
+  <div class="aluno"><img src="../img/alunos/Arthur-Henrique-Goncalves-dos-Santos.jpg" alt="Arthur Henrique Gonçalves dos Santos" data-caption="Arthur Henrique Gonçalves dos Santos"><h3>ARTHUR HENRIQUE GONÇALVES DOS SANTOS</h3></div>
+  <div class="aluno"><img src="../img/alunos/Bianca-Gabrielly-da-Silva-Costa.jpg" alt="Bianca Gabrielly da Silva Costa" data-caption="Bianca Gabrielly da Silva Costa"><h3>BIANCA GABRIELLY DA SILVA COSTA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Brayan-Lorenzo-do-Prado.jpg" alt="Brayan Lorenzo do Prado" data-caption="Brayan Lorenzo do Prado"><h3>BRAYAN LORENZO DO PRADO</h3></div>
+  <div class="aluno"><img src="../img/alunos/Eloisa-Valentina-Santos-Crispim.jpg" alt="Eloísa Valentina Santos Crispim" data-caption="Eloísa Valentina Santos Crispim"><h3>ELOÍSA VALENTINA SANTOS CRISPIM</h3></div>
+  <div class="aluno"><img src="../img/alunos/Enzo-Rafael-Magalhaes-Goncalves.jpg" alt="Enzo Rafael Magalhães Gonçalves" data-caption="Enzo Rafael Magalhães Gonçalves"><h3>ENZO RAFAEL MAGALHÃES GONÇALVES</h3></div>
+  <div class="aluno"><img src="../img/alunos/Giovanna-Portes-Pinheiro.jpg" alt="Giovanna Portes Pinheiro" data-caption="Giovanna Portes Pinheiro"><h3>GIOVANNA PORTES PINHEIRO</h3></div>
+  <div class="aluno"><img src="../img/alunos/Gregory-Miguel-Meira-de-Lago.jpg" alt="Gregory Miguel Meira de Lago" data-caption="Gregory Miguel Meira de Lago"><h3>GREGORY MIGUEL MEIRA DE LAGO</h3></div>
+  <div class="aluno"><img src="../img/alunos/Gustavo-Henrique-Monteiro-da-Silva.jpg" alt="Gustavo Henrique Monteiro da Silva" data-caption="Gustavo Henrique Monteiro da Silva"><h3>GUSTAVO HENRIQUE MONTEIRO DA SILVA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Isabella-Kehbein-Rodrigues.jpg" alt="Isabella Kehbein Rodrigues" data-caption="Isabella Kehbein Rodrigues"><h3>ISABELLA KEHBEIN RODRIGUES</h3></div>
+  <div class="aluno"><img src="../img/alunos/Ivanna-Isabella-Navarro-Charles.jpg" alt="Ivanna Isabella Navarro Charles" data-caption="Ivanna Isabella Navarro Charles"><h3>IVANNA ISABELLA NAVARRO CHARLES</h3></div>
+  <div class="aluno"><img src="../img/alunos/Joao-Lucca-Karvat.jpg" alt="João Lucca Karvat" data-caption="João Lucca Karvat"><h3>JOÃO LUCCA KARVAT</h3></div>
+  <div class="aluno"><img src="../img/alunos/Liv-Valentina-Moraes-Carvalho.jpg" alt="Liv Valentina Moraes Carvalho" data-caption="Liv Valentina Moraes Carvalho"><h3>LIV VALENTINA MORAES CARVALHO</h3></div>
+  <div class="aluno"><img src="../img/alunos/Livia-Sorbara-da-Rosa.jpg" alt="Lívia Sorbara da Rosa" data-caption="Lívia Sorbara da Rosa"><h3>LÍVIA SORBARA DA ROSA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Louise-Hotz-Martins.jpg" alt="Louise Hotz Martins" data-caption="Louise Hotz Martins"><h3>LOUISE HOTZ MARTINS</h3></div>
+  <div class="aluno"><img src="../img/alunos/Maria-Eduarda-Ortega.jpg" alt="Maria Eduarda Ortega" data-caption="Maria Eduarda Ortega"><h3>MARIA EDUARDA ORTEGA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Maria-Guilhermina-Tomacheski.jpg" alt="Maria Guilhermina Tomacheski" data-caption="Maria Guilhermina Tomacheski"><h3>MARIA GUILHERMINA TOMACHESKI</h3></div>
+  <div class="aluno"><img src="../img/alunos/Maria-Laura-Dambroski-de-Sa.jpg" alt="Maria Laura Dambroski de Sá" data-caption="Maria Laura Dambroski de Sá"><h3>MARIA LAURA DAMBROSKI DE SÁ</h3></div>
+  <div class="aluno"><img src="../img/alunos/Maria-Vitoria-Kovaleski-Herman.jpg" alt="Maria Vitória Kovaleski Herman" data-caption="Maria Vitória Kovaleski Herman"><h3>MARIA VITÓRIA KOVALESKI HERMAN</h3></div>
+  <div class="aluno"><img src="../img/alunos/Matheus-Julianoti-Pires.jpg" alt="Matheus Julianoti Pires" data-caption="Matheus Julianoti Pires"><h3>MATHEUS JULIANOTI PIRES</h3></div>
+  <div class="aluno"><img src="../img/alunos/Miguel-Jose-de-Souza.jpg" alt="Miguel José de Souza" data-caption="Miguel José de Souza"><h3>MIGUEL JOSÉ DE SOUZA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Murilo-Alves-Juliane.jpg" alt="Murilo Alves Juliane" data-caption="Murilo Alves Juliane"><h3>MURILO ALVES JULIANE</h3></div>
+  <div class="aluno"><img src="../img/alunos/Rafaella-da-Costa-Bochnia.jpg" alt="Rafaella da Costa Bochnia" data-caption="Rafaella da Costa Bochnia"><h3>RAFAELLA DA COSTA BOCHNIA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Rubens-Ricardo-Alves-de-Oliveira-Junior.jpg" alt="Rubens Ricardo Alves de Oliveira Junior" data-caption="Rubens Ricardo Alves de Oliveira Junior"><h3>RUBENS RICARDO ALVES DE OLIVEIRA JUNIOR</h3></div>
+  <div class="aluno"><img src="../img/alunos/Sofia-da-Silva-Lima.jpg" alt="Sofia da Silva Lima" data-caption="Sofia da Silva Lima"><h3>SOFIA DA SILVA LIMA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Taina-de-Souza-Possser.jpg" alt="Tainá de Souza Posser" data-caption="Tainá de Souza Posser"><h3>TAINÁ DE SOUZA POSSER</h3></div>
+  <div class="aluno"><img src="../img/alunos/Vinicius-Gudrian-Sorbara.jpg" alt="Vinicius Gudrian Sorbara" data-caption="Vinicius Gudrian Sorbara"><h3>VINICIUS GUDRIAN SORBARA</h3></div>
+  <div class="aluno"><img src="../img/alunos/Vinicius-Leao-Stocberl.jpg" alt="Vinicius Leão Stocberl" data-caption="Vinicius Leão Stocberl"><h3>VINICIUS LEÃO STOCBERL</h3></div>
+  <div class="aluno"><img src="../img/alunos/Vithor-Gabriel-Martins-Antunes.jpg" alt="Vithor Gabriel Martins Antunes" data-caption="Vithor Gabriel Martins Antunes"><h3>VITHOR GABRIEL MARTINS ANTUNES</h3></div>
+  <div class="aluno"><img src="../img/alunos/Yuri-Kurlapski-Pereira.jpg" alt="Yuri Kurlapski Pereira" data-caption="Yuri Kurlapski Pereira"><h3>YURI KURLAPSKI PEREIRA</h3></div>
+</div>
+
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop" onclick="fecharLightbox(event)">
+    <div class="lightbox">
+      <button class="close-btn" onclick="fecharLightbox(event)">Fechar ✕</button>
+      <img id="lightboxImg" alt="">
+      <div class="caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.aluno img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        const src=img.getAttribute('src');
+        const alt=img.getAttribute('alt')||'';
+        const caption=img.dataset.caption||alt;
+        document.getElementById('lightboxImg').src=src;
+        document.getElementById('lightboxCaption').textContent=caption;
+        document.getElementById('lightboxBackdrop').classList.add('open');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function fecharLightbox(e){
+      if(!e || e.target.id==='lightboxBackdrop' || e.target.tagName==='BUTTON'){
+        document.getElementById('lightboxBackdrop').classList.remove('open');
+        document.body.style.overflow='';
+      }
+    }
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharLightbox(); });
+  </script>
+</body>
+</html>

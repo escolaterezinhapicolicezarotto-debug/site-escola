@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robótica - Escola Terezinha Picoli Cezarotto</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .page-ribbon{
+      background: linear-gradient(90deg,#2563eb,#1e40af);
+      color:#fff;font-weight:600;letter-spacing:.3px
+    }
+    .turma-intro{
+      background:#f0f6ff;border:1px solid #d6e4ff;border-radius:12px;
+      padding:14px 16px;margin:14px 0 6px
+    }
+    .alunos-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+      gap:18px;margin-top:16px
+    }
+    .aluno{
+      background:#fff;border:1px solid #e6eefc;border-radius:16px;
+      padding:14px 12px;text-align:center;
+      box-shadow:0 4px 10px rgba(37,99,235,.08);
+      transition:transform .2s, box-shadow .2s, border-color .2s
+    }
+    .aluno:hover{transform:translateY(-3px);border-color:#bcd0ff;
+      box-shadow:0 8px 18px rgba(37,99,235,.13)}
+    .aluno img{
+      width:100%;max-width:180px;aspect-ratio:1/1;object-fit:cover;
+      border-radius:14px;border:3px solid #1e40af22;
+      transition:border-color .2s;cursor:zoom-in
+    }
+    .aluno:hover img{border-color:#2563eb55}
+    .aluno h3{margin:10px 0 0;font-size:1rem;line-height:1.2}
+
+    /* Lightbox */
+    .lightbox-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+      z-index:9999;align-items:center;justify-content:center;padding:24px}
+    .lightbox-backdrop.open{display:flex;animation:fadeIn .15s ease}
+    .lightbox{max-width:min(92vw,1200px);max-height:90vh;border-radius:12px;
+      overflow:hidden;background:#000;position:relative}
+    .lightbox img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain}
+    .close-btn{position:absolute;top:8px;right:8px;background:#111827cc;color:#fff;
+      border:none;border-radius:10px;font-size:14px;padding:8px 10px;cursor:pointer}
+    .caption{position:absolute;left:0;right:0;bottom:0;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));
+      color:#fff;padding:24px 16px 14px;font-size:14px;text-align:center}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  </style>
+</head>
+<body>
+
+  <header class="hero-sm"><div class="overlay"></div></header>
+
+  <div class="page-ribbon">
+    <div class="container">Robótica </div>
+  </div>
+
+  <nav>
+      	<a href="../index.html">Home</a>
+  	<a href="../institucional.html">Institucional</a>
+ 	<a href="../ensino.html">Ensino</a>
+  	<a href="../projetos.html">Projetos</a>
+  	<a href="../eventos.html">Eventos</a>
+  	<a href="../recados.html">Recados</a>
+  	<a href="../contato.html">Contato</a>
+    <a href="#" aria-current="page">Robótica </a>
+  </nav>
+
+  <main class="container">
+    <div class="turma-intro">
+      Turma do período da <strong>manhã</strong>. Clique em uma foto para ampliá-la em tela cheia.
+    </div>
+
+<div class="alunos-grid">
+  <!-- 6 Robótica A -->
+  <div class="aluno"><img src="../img/alunos/Katty-Natally-Zanotto.jpg" alt="Katty Natally Zanotto" data-caption="Katty Natally Zanotto"><p>Katty Natally Zanotto</p></div>
+  <div class="aluno"><img src="../img/alunos/Mateus-Gonçalves-Mocelin.jpg" alt="Mateus Gonçalves Mocelin" data-caption="Mateus Gonçalves Mocelin"><p>Mateus Gonçalves Mocelin</p></div>
+  <div class="aluno"><img src="../img/alunos/Sophia-Emanuele-de-Lima-Hoff.jpg" alt="Sophia Emanuele de Lima Hoff" data-caption="Sophia Emanuele de Lima Hoff"><p>Sophia Emanuele de Lima Hoff</p></div>
+  <div class="aluno"><img src="../img/alunos/Yasmin-Gouveia-Morais.jpg" alt="Yasmin Gouveia Morais" data-caption="Yasmin Gouveia Morais"><p>Yasmin Gouveia Morais</p></div>
+
+  <!-- 6 Robótica B -->
+  <div class="aluno"><img src="../img/alunos/Bernardo-Picolli-dos-Santos.jpg" alt="Bernardo Picolli dos Santos" data-caption="Bernardo Picolli dos Santos"><p>Bernardo Picolli dos Santos</p></div>
+  <div class="aluno"><img src="../img/alunos/Breno-Felipe.jpg" alt="Breno Felipe" data-caption="Breno Felipe"><p>Breno Felipe</p></div>
+  <div class="aluno"><img src="../img/alunos/Kamilla-Vitoria-Gonçalves-dos-Santos.jpg" alt="Kamilla Vitória Gonçalves dos Santos" data-caption="Kamilla Vitória Gonçalves dos Santos"><p>Kamilla Vitória Gonçalves dos Santos</p></div>
+  <div class="aluno"><img src="../img/alunos/Kethllyn-Larissa-Saturno.jpg" alt="Kethllyn Larissa Saturno" data-caption="Kethllyn Larissa Saturno"><p>Kethllyn Larissa Saturno</p></div>
+  <div class="aluno"><img src="../img/alunos/Yasmin-Silva-Bezerra.jpg" alt="Yasmin Silva Bezerra" data-caption="Yasmin Silva Bezerra"><p>Yasmin Silva Bezerra</p></div>
+
+  <!-- 6 Robótica C -->
+  <div class="aluno"><img src="../img/alunos/Caua-Mendes-Pantolfi.jpg" alt="Cauã Mendes Pantolfi" data-caption="Cauã Mendes Pantolfi"><p>Cauã Mendes Pantolfi</p></div>
+  <div class="aluno"><img src="../img/alunos/Julia-Okopnik-Aleixo.jpg" alt="Julia Okopnik Aleixo" data-caption="Julia Okopnik Aleixo"><p>Julia Okopnik Aleixo</p></div>
+  <div class="aluno"><img src="../img/alunos/Luis-Felipe-Milkiewicz-Tomaz.jpg" alt="Luís Felipe Milkiewicz Tomaz" data-caption="Luís Felipe Milkiewicz Tomaz"><p>Luís Felipe Milkiewicz Tomaz</p></div>
+  <div class="aluno"><img src="../img/alunos/Maria-Fernanda-Pereira-Lourenço.jpg" alt="Maria Fernanda Pereira Lourenço" data-caption="Maria Fernanda Pereira Lourenço"><p>Maria Fernanda Pereira Lourenço</p></div>
+  <div class="aluno"><img src="../img/alunos/Nicoli-de-Souza-Silva.jpg" alt="Nicoli de Souza Silva" data-caption="Nicoli de Souza Silva"><p>Nicoli de Souza Silva</p></div>
+  <div class="aluno"><img src="../img/alunos/Pedro-Shinayder-da-Silva-Sousa.jpg" alt="Pedro Shinayder da Silva Sousa" data-caption="Pedro Shinayder da Silva Sousa"><p>Pedro Shinayder da Silva Sousa</p></div>
+  <div class="aluno"><img src="../img/alunos/Ramon-Folador.jpg" alt="Ramon Folador" data-caption="Ramon Folador"><p>Ramon Folador</p></div>
+  <div class="aluno"><img src="../img/alunos/Valentina-Valentini-Correia.jpg" alt="Valentina Valentini Correia" data-caption="Valentina Valentini Correia"><p>Valentina Valentini Correia</p></div>
+  <div class="aluno"><img src="../img/alunos/Yasmin-Novaes-Muller.jpg" alt="Yasmin Novaes Muller" data-caption="Yasmin Novaes Muller"><p>Yasmin Novaes Muller</p></div>
+  <div class="aluno"><img src="../img/alunos/Yuri-Ballan.jpg" alt="Yuri Ballan" data-caption="Yuri Ballan"><p>Yuri Ballan</p></div>
+
+  <!-- 6 Robótica D -->
+  <div class="aluno"><img src="../img/alunos/Anita-Beatriz-dos-Santos-Carneiro.jpg" alt="Anita Beatriz dos Santos Carneiro" data-caption="Anita Beatriz dos Santos Carneiro"><p>Anita Beatriz dos Santos Carneiro</p></div>
+  <div class="aluno"><img src="../img/alunos/Anthony-Manuel-Lara-Garcia.jpg" alt="Anthony Manuel Lara Garcia" data-caption="Anthony Manuel Lara Garcia"><p>Anthony Manuel Lara Garcia</p></div>
+  <div class="aluno"><img src="../img/alunos/Davi-Henrique-Vianna-de-Souza.jpg" alt="Davi Henrique Vianna de Souza" data-caption="Davi Henrique Vianna de Souza"><p>Davi Henrique Vianna de Souza</p></div>
+  <div class="aluno"><img src="../img/alunos/Emanoely-dos-Santos-Prates.jpg" alt="Emanoely dos Santos Prates" data-caption="Emanoely dos Santos Prates"><p>Emanoely dos Santos Prates</p></div>
+  <div class="aluno"><img src="../img/alunos/Gabriel-da-Silva-Arantes.jpg" alt="Gabriel da Silva Arantes" data-caption="Gabriel da Silva Arantes"><p>Gabriel da Silva Arantes</p></div>
+  <div class="aluno"><img src="../img/alunos/Lorenzo-Henrique-Maciel-Linhares.jpg" alt="Lorenzo Henrique Maciel Linhares" data-caption="Lorenzo Henrique Maciel Linhares"><p>Lorenzo Henrique Maciel Linhares</p></div>
+  <div class="aluno"><img src="../img/alunos/Milena-Eduarda-Antonelo-Caracho.jpg" alt="Milena Eduarda Antonelo Caracho" data-caption="Milena Eduarda Antonelo Caracho"><p>Milena Eduarda Antonelo Caracho</p></div>
+  <div class="aluno"><img src="../img/alunos/Milena-Gregolin-Mattos.jpg" alt="Milena Gregolin Mattos" data-caption="Milena Gregolin Mattos"><p>Milena Gregolin Mattos</p></div>
+  <div class="aluno"><img src="../img/alunos/Rafaella-de-Castro-Rigo.jpg" alt="Rafaella de Castro Rigo" data-caption="Rafaella de Castro Rigo"><p>Rafaella de Castro Rigo</p></div>
+  <div class="aluno"><img src="../img/alunos/Sandyara-Kattleya-Souza-de-Candido.jpg" alt="Sandyara Kattleya Souza de Candido" data-caption="Sandyara Kattleya Souza de Candido"><p>Sandyara Kattleya Souza de Candido</p></div>
+</div>
+
+  </main>
+
+  <footer>
+    © 2025 Escola Municipal Terezinha Picoli Cezarotto — Todos os direitos reservados
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop" onclick="fecharLightbox(event)">
+    <div class="lightbox">
+      <button class="close-btn" onclick="fecharLightbox(event)">Fechar ✕</button>
+      <img id="lightboxImg" alt="">
+      <div class="caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.aluno img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        const src=img.getAttribute('src');
+        const alt=img.getAttribute('alt')||'';
+        const caption=img.dataset.caption||alt;
+        document.getElementById('lightboxImg').src=src;
+        document.getElementById('lightboxCaption').textContent=caption;
+        document.getElementById('lightboxBackdrop').classList.add('open');
+        document.body.style.overflow='hidden';
+      });
+    });
+    function fecharLightbox(e){
+      if(!e || e.target.id==='lightboxBackdrop' || e.target.tagName==='BUTTON'){
+        document.getElementById('lightboxBackdrop').classList.remove('open');
+        document.body.style.overflow='';
+      }
+    }
+    window.addEventListener('keydown',e=>{ if(e.key==='Escape') fecharLightbox(); });
+  </script>
+</body>
+</html>
