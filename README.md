@@ -1,0 +1,1 @@
+A Escola Municipal Terezinha Picoli Cezarotto, localizada em Cascavel/PR, é um espaço acolhedor e inovador, dedicado a oferecer uma educação de qualidade, inclusiva e sustentável. Nosso compromisso é formar cidadãos críticos, criativos e preparados para os desafios do futuro, promovendo valores como respeito, solidariedade e consciência ambiental.
